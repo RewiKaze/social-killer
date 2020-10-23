@@ -5,6 +5,14 @@
 </template>
 
 <style>
+@font-face {
+  font-family: "Chivo-Light";
+  src: url("assets/fonts/Chivo-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Inconsolata-Expanded-Bold";
+  src: url("assets/fonts/InconsolataExpanded-Bold.ttf") format("truetype");
+}
 body {
   margin: 0;
   background-image: url("assets/background.png");

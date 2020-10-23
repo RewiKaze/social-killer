@@ -30,10 +30,6 @@ export default {
 };
 </script>
 <style>
-@font-face {
-  font-family: "Inconsolata-Expanded-Bold";
-  src: url("../assets/fonts/InconsolataExpanded-Bold.ttf") format("truetype");
-}
 .website-title {
   font-family: "Inconsolata-Expanded-Bold", "Inconsolata", monospace;
   /* font-weight: bold; */
