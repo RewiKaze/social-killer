@@ -13,9 +13,18 @@
   font-family: "Inconsolata-Expanded-Bold";
   src: url("assets/fonts/InconsolataExpanded-Bold.ttf") format("truetype");
 }
+@font-face {
+  font-family: "ChulaCharas";
+  src: url("assets/fonts/ChulaCharasNewReg.ttf") format("truetype");
+}
+@font-face {
+  font-family: "ChulaCharasBold";
+  src: url("assets/fonts/ChulaCharasNewBold.ttf") format("truetype");
+}
 body {
   margin: 0;
   background-image: url("assets/background.png");
+  background-color: black;
   background-repeat: no-repeat;
   background-size: cover;
 }

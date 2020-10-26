@@ -4,13 +4,30 @@
       <div class="header-comment">
         <label class="title">Social Killer</label>
         <input type="text" class="search-field" disabled />
+        <!-- <img src="@/assets/icon/icon1-01.png" width="10%" /> -->
         <hr />
       </div>
       <div class="comment-content">
         <div class="user">
-          <div class="user-img"></div>
-          <div class="user-name">แอดมินซ่า คอนเทนต์แซ่บ</div>
-          <div class="user-timestamp"></div>
+          <img
+            class="img-profile"
+            src="@/assets/profile/profile5-01.png"
+            height="50%"
+          />
+          <div class="user-name">
+            <div class="name">แอดมินซ่า คอนเทนต์แซ่บ</div>
+            <div class="timestamp">20 ตุลาคม เวลา 15.30</div>
+          </div>
+          <div class="option">...</div>
+        </div>
+        <div class="comment">
+          <div class="test"></div>
+          <!-- <div class="comment-text">
+            หนุ่ม ๆดูมันดิ “ขอบีบนมสาว” กลางสยาม ฮาลั่น!!
+          </div>
+          <div class="img-comment">
+            <img src="@/assets/testImg.jpg" width="100%" height="300px" />
+          </div> -->
         </div>
       </div>
     </div>
@@ -24,8 +41,52 @@ export default {
 </script>
 
 <style>
+.test {
+}
+.comment {
+  height: 60%;
+  width: 100%;
+  font-family: "ChulaCharas";
+}
+.img-profile {
+  position: relative;
+  top: 50%;
+  transform: translate(0, -55%);
+}
+
+.option {
+  position: relative;
+  top: 50%;
+  transform: translate(0, -50%);
+  float: right;
+  font-size: 20px;
+}
+.name {
+  font-family: "ChulaCharasBold";
+  font-size: 20px;
+}
+.timestamp {
+  font-family: "ChulaCharas";
+  font-size: 15px;
+}
+.user-name {
+  position: relative;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: fit-content;
+  display: inline-block;
+  height: auto;
+  /* vertical-align: middle; */
+}
+.user-img {
+  height: 80%;
+}
+.user {
+  height: 25%;
+  padding-left: 10px;
+}
 .comment-content {
-  width: 80%;
+  width: 70%;
   height: 80%;
   margin: 0;
 }
@@ -61,7 +122,7 @@ export default {
   background-color: transparent;
   border: white solid 0.5px;
   width: 35%;
-
+  margin: auto;
   transform: translate(0, -22.5%);
 }
 hr {
