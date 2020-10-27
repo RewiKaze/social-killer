@@ -12,7 +12,7 @@
             <label class="text-md-right">Password</label>&nbsp;
             <input type="password" class="field" disabled value="surprise" />
           </div>
-          <div class="enter-button">Enter</div>
+          <div class="enter-button" @click="goToComment">Enter</div>
         </div>
       </div>
     </div>
@@ -24,9 +24,14 @@
 </template>
 <script>
 // @ is an alias to /src
-
+import router from "@/router";
 export default {
-  name: "Home"
+  name: "Home",
+  methods: {
+    goToComment() {
+      router.push("/comment");
+    }
+  }
 };
 </script>
 <style>
@@ -91,6 +96,11 @@ export default {
   width: 35%;
   margin: auto;
   margin-top: 0.5em;
+  cursor: pointer;
+  transition: 1s;
+}
+.enter-button:hover {
+  filter: brightness(5);
 }
 .username-field {
   height: 15%;

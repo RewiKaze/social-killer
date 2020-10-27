@@ -15,6 +15,7 @@ const routes = [
     path: "/comment",
     name: "Comment",
     component: comment
+    
   }
 ];
 
