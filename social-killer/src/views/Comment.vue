@@ -7,7 +7,7 @@
         <!-- <img src="@/assets/icon/icon1-01.png" width="10%" /> -->
         <hr />
       </div>
-      <div class="first-comment" id="first-comment" style="display:none;">
+      <div class="first-comment" id="first-comment">
         <div class="comment-content">
           <div class="user">
             <img
@@ -68,7 +68,7 @@
           />
         </div>
       </div>
-      <div class="second-comment" id="second-comment">
+      <div class="second-comment" id="second-comment" style="display:none;">
         <div class="comment-content">
           <div class="user">
             <img
@@ -89,12 +89,31 @@
             </div>
           </div>
           <div class="like-section">
-            <b-icon-hand-thumbs-up></b-icon-hand-thumbs-up>
+            <div class="like" style="height:auto">
+              <div class="like-status">
+                <b-icon-hand-thumbs-up></b-icon-hand-thumbs-up> {{ numLike }}
+              </div>
+              <div class="comment-share">ความคิดเห็น 5 รายการ แชร์ 1 ครั้ง</div>
+            </div>
+            <br />
+            <hr />
           </div>
           <div class="emote">
-            <img src="@/assets/emoji/emoji-01.png" width="10%" />
-            <img src="@/assets/emoji/emoji-02.png" width="10%" />
-            <img src="@/assets/emoji/emoji-03.png" width="10%" />
+            <img
+              @click="changeToLivePage"
+              src="@/assets/emoji/emoji-01.png"
+              width="10%"
+            />
+            <img
+              @click="changeToLivePage"
+              src="@/assets/emoji/emoji-02.png"
+              width="10%"
+            />
+            <img
+              @click="changeToLivePage"
+              src="@/assets/emoji/emoji-03.png"
+              width="10%"
+            />
             <br />
             <label class="text-emote">โปรดแสดงความรู้สึกต่อโพสต์นี้</label>
           </div>
@@ -125,19 +144,25 @@
 </template>
 
 <script>
+import router from "@/router";
 export default {
   name: "comment",
+  data() {
+    return {
+      numLike: 16
+    };
+  },
   methods: {
     changeCommentOneToTwo() {
-      console.log("hello");
       document.getElementById("second-comment").classList.add("fade-in-bottom");
       document.getElementById("first-comment").classList.add("fade-out-top");
       setTimeout(() => {
         document.getElementById("first-comment").style.display = "none";
         document.getElementById("second-comment").style.display = "block";
       }, 600);
-      // document.getElementById("first-comment").style.display = "none";
-      // document.getElementById("second-comment").style.display = "block";
+    },
+    changeToLivePage() {
+      router.push("/live");
     }
   }
 };
@@ -172,6 +197,19 @@ export default {
   }
 }
 /*End Animation*/
+.like-status {
+  position: absolute;
+  left: 10;
+}
+.comment-share {
+  position: absolute;
+  right: 0;
+}
+.like-section {
+  font-family: "ChulaCharas";
+  margin-top: 10px;
+  padding-left: 30px;
+}
 .second-comment-text {
   height: 5em;
   font-size: 35px;

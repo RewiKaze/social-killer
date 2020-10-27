@@ -6,11 +6,23 @@
         <div class="form-validate">
           <div class="username-field">
             <label class="text-md-right">Username</label>&nbsp;
-            <input type="text" class="field" disabled value="Anonymous" />
+            <input
+              type="text"
+              class="field"
+              disabled
+              :value="userTyping"
+              id="username-field"
+            />
           </div>
           <div class="password-field">
             <label class="text-md-right">Password</label>&nbsp;
-            <input type="password" class="field" disabled value="surprise" />
+            <input
+              type="password"
+              :value="passTyping"
+              class="field"
+              disabled
+              id="password-field"
+            />
           </div>
           <div class="enter-button" @click="goToComment">Enter</div>
         </div>
@@ -27,10 +39,46 @@
 import router from "@/router";
 export default {
   name: "Home",
+  data() {
+    return {
+      userField: "Anonymous",
+      passField: "surprise",
+      textUser: 0,
+      passUser: 0,
+      userTyping: "",
+      passTyping: ""
+    };
+  },
   methods: {
     goToComment() {
       router.push("/comment");
+    },
+    typeWrite() {
+      if (this.textUser < this.userField.length) {
+        this.userTyping += this.userField.charAt(this.textUser);
+        this.textUser++;
+        setTimeout(() => {
+          this.typeWrite();
+        }, 50);
+      }
+    },
+    passWrite() {
+      if (this.passUser < this.passField.length) {
+        this.passTyping += this.passField.charAt(this.passUser);
+        this.passUser++;
+        setTimeout(() => {
+          this.passWrite();
+        }, 50);
+      }
     }
+  },
+  mounted() {
+    setTimeout(() => {
+      this.typeWrite();
+    }, 1000);
+    setTimeout(() => {
+      this.passWrite();
+    }, 1450);
   }
 };
 </script>
