@@ -31,10 +31,11 @@
             <div class="p-2 icon-1">
               <img src="@/assets/icon/icon5-01.png" width="100%" />
             </div>
-            <div class="p-2 icon-1" style="font-size: 30px;">
+            <div class="p-1 icon-1" style="font-size: 2.5vmin;">
               854
             </div>
           </div>
+          <!-- video -->
           <div class="p-3" style="width: auto;height: 90%;">
             <div
               class="tenor-gif-embed"
@@ -53,9 +54,9 @@
         </b-col>
         <b-col cols="6" class="comment-live border-left border-light py-3">
           <!-- !!! One person comemnt !!! -->
-          <div class="row p-1">
+          <b-row class="p-1">
             <!-- proflie -->
-            <div class="col-3">
+            <b-col cols="3">
               <div class="rounded-circle">
                 <img
                   src="@/assets/profile/profile1-01.png"
@@ -63,23 +64,33 @@
                   width="100%"
                 />
               </div>
-            </div>
+            </b-col>
             <!-- comment -->
-            <div class="col-5">
+            <b-col cols="5">
               <div class="d-flex flex-column">
-                <div class="p-2 font-weight-bold comment-txt">Warawit Rich</div>
+                <div class="p-2 font-weight-bold comment-name">Warawit Rich</div>
                 <div class="px-2 comment-txt">กูรู้นะ...</div>
                 <div class="px-2 comment-txt">พวกมึงโฟกัสอะไร</div>
               </div>
-            </div>
+            </b-col>
             <!-- Emoji -->
-            <div class="col-4"></div>
-          </div>
+            <b-col cols="4" class="live-emoji">
+              <img
+                src="@/assets/emoji/emoji-01.png"
+              />
+              <img
+                src="@/assets/emoji/emoji-02.png"
+              />
+              <img
+                src="@/assets/emoji/emoji-03.png"
+              />
+            </b-col>
+          </b-row>
           <!-- !!! End !!! -->
           <!-- !!! One person comemnt !!! -->
-          <div class="row p-1">
+          <b-row class="p-1">
             <!-- proflie -->
-            <div class="col-3">
+            <b-col cols="3">
               <div class="rounded-circle">
                 <img
                   src="@/assets/profile/profile4-01.png"
@@ -87,25 +98,35 @@
                   width="100%"
                 />
               </div>
-            </div>
+            </b-col>
             <!-- comment -->
-            <div class="col-5">
+            <b-col cols="5">
               <div class="d-flex flex-column">
-                <div class="p-2 font-weight-bold comment-txt">
+                <div class="p-2 font-weight-bold comment-name">
                   Somsak Kumkom
                 </div>
                 <div class="px-2 comment-txt">เข้ามาใกล้หน่อย</div>
                 <div class="px-2 comment-txt">อยากเห็นชัดๆ</div>
               </div>
-            </div>
+            </b-col>
             <!-- Emoji -->
-            <div class="col-4"></div>
-          </div>
+            <b-col cols="4" class="live-emoji">
+              <img
+                src="@/assets/emoji/emoji-01.png"
+              />
+              <img
+                src="@/assets/emoji/emoji-02.png"
+              />
+              <img
+                src="@/assets/emoji/emoji-03.png"
+              />
+            </b-col>
+          </b-row>
           <!-- !!! End !!! -->
           <!-- !!! One person comemnt !!! -->
-          <div class="row p-1">
+          <b-row class="p-1">
             <!-- proflie -->
-            <div class="col-3">
+            <b-col cols="3">
               <div class="rounded-circle">
                 <img
                   src="@/assets/profile/profile2-01.png"
@@ -113,24 +134,24 @@
                   width="100%"
                 />
               </div>
-            </div>
+            </b-col>
             <!-- comment -->
-            <div class="col-5">
+            <b-col cols="5">
               <div class="d-flex flex-column">
-                <div class="p-2 font-weight-bold comment-txt">
+                <div class="p-2 font-weight-bold comment-name">
                   Teerapong Mindee
                 </div>
                 <div class="px-2 comment-txt">แม่ค้าคือดืออออออ</div>
               </div>
-            </div>
+            </b-col>
             <!-- Emoji -->
-            <div class="col-4"></div>
-          </div>
+            <b-col cols="4" class="live-emoji"></b-col>
+          </b-row>
           <!-- !!! End !!! -->
           <!-- !!! One person comemnt !!! -->
-          <div class="row p-1">
+          <b-row class="p-1">
             <!-- proflie -->
-            <div class="col-3">
+            <b-col cols="3">
               <div class="rounded-circle">
                 <img
                   src="@/assets/profile/profile3-01.png"
@@ -138,24 +159,24 @@
                   width="100%"
                 />
               </div>
-            </div>
+            </b-col>
             <!-- comment -->
-            <div class="col-5">
+            <b-col cols="5">
               <div class="d-flex flex-column">
-                <div class="p-2 font-weight-bold comment-txt">
+                <div class="p-2 font-weight-bold comment-name">
                   Saksit Kobkhun
                 </div>
                 <div class="px-2 comment-txt">โอ้ววววว ว้าวววๆๆๆ</div>
               </div>
-            </div>
+            </b-col>
             <!-- Emoji -->
-            <div class="col-4"></div>
-          </div>
+            <b-col cols="4" class="live-emoji"></b-col>
+          </b-row>
           <!-- !!! End !!! -->
           <!-- !!! One person comemnt !!! -->
-          <div class="row p-1">
+          <b-row class="p-1">
             <!-- proflie -->
-            <div class="col-3">
+            <b-col cols="3">
               <div class="rounded-circle">
                 <img
                   src="@/assets/profile/profile3-01.png"
@@ -163,25 +184,35 @@
                   width="100%"
                 />
               </div>
-            </div>
+            </b-col>
             <!-- comment -->
-            <div class="col-5">
+            <b-col cols="5">
               <div class="d-flex flex-column">
-                <div class="p-2 font-weight-bold comment-txt">
+                <div class="p-2 font-weight-bold comment-name">
                   Saksit Kobkhun
                 </div>
                 <div class="px-2 comment-txt">แม่ค้าน่ารักจัง</div>
                 <div class="px-2 comment-txt">ดูแต่แม่ค้าค้าบ</div>
               </div>
-            </div>
+            </b-col>
             <!-- Emoji -->
-            <div class="col-4"></div>
-          </div>
+            <b-col cols="4" class="live-emoji">
+              <img
+                src="@/assets/emoji/emoji-01.png"
+              />
+              <img
+                src="@/assets/emoji/emoji-02.png"
+              />
+              <img
+                src="@/assets/emoji/emoji-03.png"
+              />
+            </b-col>
+          </b-row>
           <!-- !!! End !!! -->
           <!-- !!! One person comemnt !!! -->
-          <div class="row p-1">
+          <b-row class="p-1">
             <!-- proflie -->
-            <div class="col-3">
+            <b-col cols="3">
               <div class="rounded-circle">
                 <img
                   src="@/assets/profile/profile2-01.png"
@@ -189,19 +220,29 @@
                   width="100%"
                 />
               </div>
-            </div>
+            </b-col>
             <!-- comment -->
-            <div class="col-5">
+            <b-col cols="5">
               <div class="d-flex flex-column">
-                <div class="p-2 font-weight-bold comment-txt">
+                <div class="p-2 font-weight-bold comment-name">
                   Teerapong Mindee
                 </div>
                 <div class="px-2 comment-txt">ชุดนี้คือดือมากเลยครับ</div>
               </div>
-            </div>
+            </b-col>
             <!-- Emoji -->
-            <div class="col-4"></div>
-          </div>
+            <b-col cols="4" class="live-emoji">
+              <img
+                src="@/assets/emoji/emoji-01.png"
+              />
+              <img
+                src="@/assets/emoji/emoji-02.png"
+              />
+              <img
+                src="@/assets/emoji/emoji-03.png"
+              />
+            </b-col>
+          </b-row>
           <!-- !!! End !!! -->
         </b-col>
       </b-row>
@@ -249,13 +290,35 @@ export default {
   width: 10%;
 }
 .icon-2 {
-  width: 15%;
+  width: 20%;
 }
 .comment-live {
   height: 100%;
-  overflow: scroll;
+  /* overflow: scroll; */
+}
+.comment-name {
+  font-family: "ChulaCharasBold";
+  font-size: 2.5vmin;
 }
 .comment-txt {
+
+  font-family: "ChulaCharas";
   font-size: 2.5vmin;
+}
+.live-emoji > img {
+  transition: 0.1s;
+  cursor: pointer;
+  width: 25%;
+}
+.live-emoji > img:hover {
+  transform: scale(1.5);
+}
+.live-emoji {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 </style>
