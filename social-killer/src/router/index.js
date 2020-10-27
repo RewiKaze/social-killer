@@ -2,6 +2,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import comment from "../views/Comment.vue";
+import live from "../views/livepage.vue";
 
 Vue.use(VueRouter);
 
@@ -15,6 +16,12 @@ const routes = [
     path: "/comment",
     name: "Comment",
     component: comment
+    
+  },
+  {
+    path: "/live",
+    name: "Live",
+    component: live
     
   }
 ];
