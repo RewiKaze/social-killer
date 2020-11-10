@@ -54,7 +54,7 @@
         </b-col>
         <b-col cols="6" class="comment-live border-left border-light py-3">
           <!-- !!! One person comemnt !!! -->
-          <b-row class="p-1">
+          <b-row id="comment-1" class="p-1">
             <!-- proflie -->
             <b-col cols="3">
               <div class="rounded-circle">
@@ -74,21 +74,30 @@
               </div>
             </b-col>
             <!-- Emoji -->
-            <b-col cols="4" class="live-emoji">
+            <b-col id="emoji-1" cols="4" class="live-emoji">
               <img
+                @click="addNextComment('emo-1')"
+                id="emo-1"
+                class="emo-hide-1"
                 src="@/assets/emoji/emoji-01.png"
               />
               <img
+                @click="addNextComment('emo-2')"
+                id="emo-2"
+                class="emo-hide-1"
                 src="@/assets/emoji/emoji-02.png"
               />
               <img
+                @click="addNextComment('emo-3')"
+                id="emo-3"
+                class="emo-hide-1"
                 src="@/assets/emoji/emoji-03.png"
               />
             </b-col>
           </b-row>
-          <!-- !!! End !!! -->
+          <!-- !!! End Comment !!! -->
           <!-- !!! One person comemnt !!! -->
-          <b-row class="p-1">
+          <b-row id="comment-2" class="p-1" style="display:none;">
             <!-- proflie -->
             <b-col cols="3">
               <div class="rounded-circle">
@@ -110,21 +119,30 @@
               </div>
             </b-col>
             <!-- Emoji -->
-            <b-col cols="4" class="live-emoji">
+            <b-col id="emoji-2" cols="4" class="live-emoji">
               <img
+                @click="addNextComment('emo-4')"
+                id="emo-4"
+                class="emo-hide-2"
                 src="@/assets/emoji/emoji-01.png"
               />
               <img
+                @click="addNextComment('emo-5')"
+                id="emo-5"
+                class="emo-hide-2"
                 src="@/assets/emoji/emoji-02.png"
               />
               <img
+                @click="addNextComment('emo-6')"
+                id="emo-6"
+                class="emo-hide-2"
                 src="@/assets/emoji/emoji-03.png"
               />
             </b-col>
           </b-row>
-          <!-- !!! End !!! -->
+          <!-- !!! End Comment !!! -->
           <!-- !!! One person comemnt !!! -->
-          <b-row class="p-1">
+          <b-row id="comment-3" class="p-1" style="display:none;">
             <!-- proflie -->
             <b-col cols="3">
               <div class="rounded-circle">
@@ -145,11 +163,30 @@
               </div>
             </b-col>
             <!-- Emoji -->
-            <b-col cols="4" class="live-emoji"></b-col>
+            <b-col id="emoji-3" cols="4" class="live-emoji">
+              <img
+                @click="addNextComment('emo-7')"
+                id="emo-7"
+                class="emo-hide-3"
+                src="@/assets/emoji/emoji-01.png"
+              />
+              <img
+                @click="addNextComment('emo-8')"
+                id="emo-8"
+                class="emo-hide-3"
+                src="@/assets/emoji/emoji-02.png"
+              />
+              <img
+                @click="addNextComment('emo-9')"
+                id="emo-9"
+                class="emo-hide-3"
+                src="@/assets/emoji/emoji-03.png"
+              />
+            </b-col>
           </b-row>
-          <!-- !!! End !!! -->
+          <!-- !!! End Comment !!! -->
           <!-- !!! One person comemnt !!! -->
-          <b-row class="p-1">
+          <b-row id="comment-4" class="p-1" style="display:none;">
             <!-- proflie -->
             <b-col cols="3">
               <div class="rounded-circle">
@@ -170,11 +207,30 @@
               </div>
             </b-col>
             <!-- Emoji -->
-            <b-col cols="4" class="live-emoji"></b-col>
+            <b-col id="emoji-4" cols="4" class="live-emoji">
+              <img
+                @click="addNextComment('emo-10')"
+                id="emo-10"
+                class="emo-hide-4"
+                src="@/assets/emoji/emoji-01.png"
+              />
+              <img
+                @click="addNextComment('emo-11')"
+                id="emo-11"
+                class="emo-hide-4"
+                src="@/assets/emoji/emoji-02.png"
+              />
+              <img
+                @click="addNextComment('emo-12')"
+                id="emo-12"
+                class="emo-hide-4"
+                src="@/assets/emoji/emoji-03.png"
+              />
+            </b-col>
           </b-row>
-          <!-- !!! End !!! -->
+          <!-- !!! End Comment !!! -->
           <!-- !!! One person comemnt !!! -->
-          <b-row class="p-1">
+          <b-row id="comment-5" class="p-1" style="display:none;">
             <!-- proflie -->
             <b-col cols="3">
               <div class="rounded-circle">
@@ -196,21 +252,30 @@
               </div>
             </b-col>
             <!-- Emoji -->
-            <b-col cols="4" class="live-emoji">
+            <b-col id="emoji-5" cols="4" class="live-emoji">
               <img
+                @click="addNextComment('emo-13')"
+                id="emo-13"
+                class="emo-hide-5"
                 src="@/assets/emoji/emoji-01.png"
               />
               <img
+                @click="addNextComment('emo-14')"
+                id="emo-14"
+                class="emo-hide-5"
                 src="@/assets/emoji/emoji-02.png"
               />
               <img
+                @click="addNextComment('emo-15')"
+                id="emo-15"
+                class="emo-hide-5"
                 src="@/assets/emoji/emoji-03.png"
               />
             </b-col>
           </b-row>
-          <!-- !!! End !!! -->
+          <!-- !!! End Comment !!! -->
           <!-- !!! One person comemnt !!! -->
-          <b-row class="p-1">
+          <b-row id="comment-6" class="p-1" style="display:none;">
             <!-- proflie -->
             <b-col cols="3">
               <div class="rounded-circle">
@@ -231,19 +296,28 @@
               </div>
             </b-col>
             <!-- Emoji -->
-            <b-col cols="4" class="live-emoji">
+            <b-col id="emoji-6" cols="4" class="live-emoji">
               <img
+                @click="changeToChatPage('emo-16')"
+                id="emo-16"
+                class="emo-hide-6"
                 src="@/assets/emoji/emoji-01.png"
               />
               <img
+                @click="changeToChatPage('emo-17')"
+                id="emo-17"
+                class="emo-hide-6"
                 src="@/assets/emoji/emoji-02.png"
               />
               <img
+                @click="changeToChatPage('emo-18')"
+                id="emo-18"
+                class="emo-hide-6"
                 src="@/assets/emoji/emoji-03.png"
               />
             </b-col>
           </b-row>
-          <!-- !!! End !!! -->
+          <!-- !!! End Comment !!! -->
         </b-col>
       </b-row>
     </b-container>
@@ -253,7 +327,54 @@
 // import router from "@/router";
 export default {
   name: "live",
-  methods: {},
+  data() {
+    return {
+      num: 2
+    }
+  },
+  methods: {
+    addNextComment(id) {
+      document.getElementById("comment-" + this.num).classList.add("comment-fade-in");
+      setTimeout(() => {
+        document.getElementById("comment-" + this.num).style.display = "inline-flex";
+        this.num += 1;
+      }, 300);
+
+      // Show only clicked emoji
+      if (document.getElementById) {
+        var divid = document.getElementById(id);
+        var divs = document.getElementsByClassName("emo-hide-" + (this.num - 1));
+
+        for (var i = 0; i < divs.length; i++) {
+          divs[i].style.display = "none";
+        }
+        divid.classList.add("bounce-in-right");
+        setTimeout(() => {
+          divid.style.display = "flex";
+        }, 300);
+      }
+      return false;
+
+    },
+    changeToChatPage(id) {
+      // ยังไม่เปลี่ยนหน้า
+
+      // Show only clicked emoji
+      if (document.getElementById) {
+        var divid = document.getElementById(id);
+        var divs = document.getElementsByClassName("emo-hide-" + (this.num - 1));
+
+        for (var i = 0; i < divs.length; i++) {
+          divs[i].style.display = "none";
+        }
+        divid.classList.add("bounce-in-right");
+        setTimeout(() => {
+          divid.style.display = "flex";
+        }, 300);
+      }
+      return false;
+    }
+  },
   mounted() {
     let recaptchaScript = document.createElement("script");
     recaptchaScript.setAttribute("src", "https://tenor.com/embed.js");
@@ -263,6 +384,79 @@ export default {
 </script>
 
 <style>
+/* Animation */
+.comment-fade-in {
+	animation: comment-fade-in 0.6s cubic-bezier(0.455, 0.030, 0.515, 0.955) ;
+}
+@keyframes comment-fade-in {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* .emoji-puff-out {
+	-webkit-animation: emoji-puff-out 1s cubic-bezier(0.165, 0.840, 0.440, 1.000) ;
+	        animation: emoji-puff-out 1s cubic-bezier(0.165, 0.840, 0.440, 1.000) ;
+}
+@keyframes emoji-puff-out {
+  0% {
+    transform: scale(1);
+    filter: blur(0px);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2);
+    filter: blur(4px);
+    opacity: 0;
+  }
+} */
+
+.bounce-in-right {
+	animation: bounce-in-right 1.5s ease-in ;
+}
+@keyframes bounce-in-right {
+  0% {
+    transform: translateX(100px);
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  38% {
+    transform: translateX(0);
+    animation-timing-function: ease-out;
+    opacity: 1;
+  }
+  55% {
+    transform: translateX(30px);
+    animation-timing-function: ease-in;
+  }
+  72% {
+    transform: translateX(0);
+    animation-timing-function: ease-out;
+  }
+  81% {
+    transform: translateX(21px);
+    animation-timing-function: ease-in;
+  }
+  90% {
+    transform: translateX(0);
+    animation-timing-function: ease-out;
+  }
+  95% {
+    transform: translateX(5px);
+    animation-timing-function: ease-in;
+  }
+  100% {
+    transform: translateX(0);
+    animation-timing-function: ease-out;
+  }
+}
+
+/* End */
 .live-page {
   width: 100vw;
   height: 100vh;
