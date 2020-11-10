@@ -334,7 +334,11 @@ export default {
   },
   methods: {
     addNextComment(id) {
+      if (document.getElementById(id).classList.contains("clicked")){
+        console.log("Clicked")
+      } else {
       document.getElementById("comment-" + this.num).classList.add("comment-fade-in");
+      document.getElementById(id).classList.add("clicked")
       setTimeout(() => {
         document.getElementById("comment-" + this.num).style.display = "inline-flex";
         this.num += 1;
@@ -354,9 +358,13 @@ export default {
         }, 300);
       }
       return false;
-
+      }
     },
     changeToChatPage(id) {
+      if (document.getElementById(id).classList.contains("clicked")){
+        console.log("Clicked")
+      } else {
+      document.getElementById(id).classList.add("clicked")
       // ยังไม่เปลี่ยนหน้า
 
       // Show only clicked emoji
@@ -373,6 +381,7 @@ export default {
         }, 300);
       }
       return false;
+      }
     }
   },
   mounted() {
