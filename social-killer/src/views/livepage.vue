@@ -408,23 +408,6 @@ export default {
   }
 }
 
-/* .emoji-puff-out {
-	-webkit-animation: emoji-puff-out 1s cubic-bezier(0.165, 0.840, 0.440, 1.000) ;
-	        animation: emoji-puff-out 1s cubic-bezier(0.165, 0.840, 0.440, 1.000) ;
-}
-@keyframes emoji-puff-out {
-  0% {
-    transform: scale(1);
-    filter: blur(0px);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(2);
-    filter: blur(4px);
-    opacity: 0;
-  }
-} */
-
 .bounce-in-right {
 	animation: bounce-in-right 1.5s ease-in ;
 }
@@ -465,14 +448,16 @@ export default {
   }
 }
 
-/* End */
+/* End Animation */
 .live-page {
+  
   width: 100vw;
   height: 100vh;
   color: white;
   overflow: hidden;
 }
 .comment-outside-border {
+  min-width: 500px;
   border: white solid 0.5px;
   width: 75%;
   height: 85%;
@@ -497,7 +482,6 @@ export default {
 }
 .comment-live {
   height: 100%;
-  /* overflow: scroll; */
 }
 .comment-name {
   font-family: "ChulaCharasBold";
