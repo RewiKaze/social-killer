@@ -1,0 +1,23 @@
+body {
+	margin: 0;
+	background-image: url(../background.png);
+}
+.title {
+	margin-top: 50px;
+}
+.name {
+	font-size: 110px;
+	color: white;
+}
+.detail {
+	margin-top: -30px;
+}
+.small-text {
+	color: white;
+	font-size: 24px;
+	line-height: 15px;
+}
+.wait {
+	color: white;
+	margin-top: 12%;
+}
