@@ -74,10 +74,18 @@
               </div>
             </li>
           </ul>
-          <p class="m-auto d-flex align-items-center" style="width: 100%">
-            โปรดเลือกคำตอบ
-          </p>
         </div>
+        <p
+          style="
+            position: fixed;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            margin: 0;
+          "
+        >
+          โปรดเลือกคำตอบ
+        </p>
       </div>
     </div>
   </div>

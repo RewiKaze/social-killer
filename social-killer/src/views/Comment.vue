@@ -68,7 +68,7 @@
           />
         </div>
       </div>
-      <div class="second-comment" id="second-comment" style="display:none;">
+      <div class="second-comment" id="second-comment" style="display: none">
         <div class="comment-content">
           <div class="user">
             <img
@@ -89,7 +89,7 @@
             </div>
           </div>
           <div class="like-section">
-            <div class="like" style="height:auto">
+            <div class="like" style="height: auto">
               <div class="like-status">
                 <b-icon-hand-thumbs-up></b-icon-hand-thumbs-up> {{ numLike }}
               </div>
@@ -97,6 +97,103 @@
             </div>
             <br />
             <hr />
+          </div>
+          <div class="emote">
+            <img
+              @click="changeCommentTwoToThree()"
+              src="@/assets/emoji/emoji-01.png"
+              width="10%"
+            />
+            <img
+              @click="changeCommentTwoToThree()"
+              src="@/assets/emoji/emoji-02.png"
+              width="10%"
+            />
+            <img
+              @click="changeCommentTwoToThree()"
+              src="@/assets/emoji/emoji-03.png"
+              width="10%"
+            />
+            <br />
+            <label class="text-emote">โปรดแสดงความรู้สึกต่อโพสต์นี้</label>
+          </div>
+        </div>
+        <div class="side-comment">
+          <br /><br />
+          <img
+            class="side-img"
+            src="@/assets/comment/second-comment/01.png"
+            width="60%"
+          />
+          <br /><br />
+          <img
+            class="side-img"
+            src="@/assets/comment/second-comment/02.png"
+            width="60%"
+          />
+          <br /><br />
+          <img
+            class="side-img"
+            src="@/assets/comment/second-comment/03.png"
+            width="60%"
+          />
+        </div>
+      </div>
+      <div class="third-comment" id="third-comment" style="display: none">
+        <div class="comment-content">
+          <div class="user">
+            <img
+              class="img-profile"
+              src="@/assets/profile/profile6-01.png"
+              height="50%"
+            />
+            <div class="user-name">
+              <div class="name">Kitty</div>
+              <div class="timestamp">เมื่อวานนี้ เวลา 09.42 น.</div>
+            </div>
+            <div class="option">...</div>
+          </div>
+          <div class="comment">
+            <!-- <div class="second-comment-text"> -->
+            <div style="font-size: 1.3em; text-align: center">
+              ทำไมประเทศนี้ผ้าอนามัยแพงจังวะ...เมื่อไหร่รัฐบาลจะรู้ว่ามันจำเป็น
+              ผู้หญิงทุกคนต้องใช้
+            </div>
+          </div>
+          <div class="like-section">
+            <div class="like" style="height: auto">
+              <div class="like-status">
+                <b-icon-hand-thumbs-up></b-icon-hand-thumbs-up> 109
+                <!-- like number -->
+              </div>
+              <div class="comment-share">
+                ความคิดเห็น 1100 รายการ แชร์ 73 ครั้ง
+              </div>
+            </div>
+            <br />
+            <hr />
+          </div>
+          <div class="other-comment" style="display: inline-block">
+            <img
+              src="@/assets/profile/profile5-01.png"
+              width="20%"
+              style="margin-top: 1em"
+            />
+            <div
+              class="other-comment-box"
+              style="
+                display: inline-flex;
+                height: 90%;
+                border: white solid 0.5px;
+                padding: 10px;
+                border-radius: 10px;
+              "
+            >
+              <div style="">
+                Somsak Kumkom<br />อยากเมนส์ไม่มาสัก 9 เดือนป่าวน้อง
+                เดี๋ยวพี่ช่วย
+              </div>
+            </div>
           </div>
           <div class="emote">
             <img
@@ -149,7 +246,7 @@ export default {
   name: "comment",
   data() {
     return {
-      numLike: 16
+      numLike: 16,
     };
   },
   methods: {
@@ -161,10 +258,21 @@ export default {
         document.getElementById("second-comment").style.display = "block";
       }, 600);
     },
+    changeCommentTwoToThree() {
+      document
+        .getElementById("second-comment")
+        .classList.remove("fade-in-bottom");
+      document.getElementById("second-comment").classList.add("fade-out-top");
+      document.getElementById("third-comment").classList.add("fade-in-bottom");
+      setTimeout(() => {
+        document.getElementById("second-comment").style.display = "none";
+        document.getElementById("third-comment").style.display = "block";
+      }, 600);
+    },
     changeToLivePage() {
       router.push("/live");
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -360,5 +468,12 @@ hr {
   margin-right: 2%;
   margin-top: 0;
   margin-bottom: 0;
+}
+
+/* Third Comment */
+.third-comment {
+  width: 100%;
+  height: 75%;
+  position: relative;
 }
 </style>

@@ -4,6 +4,7 @@ import Home from "../views/Home.vue";
 import comment from "../views/Comment.vue";
 import live from "../views/livepage.vue";
 import chat from "@/views/Chat.vue"
+import livecam from "@/views/LiveAndCam.vue"
 
 Vue.use(VueRouter);
 
@@ -27,6 +28,10 @@ const routes = [
   {
     path: "/chat",
     component : chat
+  },
+  {
+    path: "/livecam",
+    component : livecam
   }
 ];
 
