@@ -3,9 +3,10 @@ import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import comment from "../views/Comment.vue";
 import live from "../views/livepage.vue";
-import chat from "@/views/Chat.vue"
+import chat from "@/views/Chat.vue";
 // import livecam from "@/views/LiveAndCam.vue"
-import loading from "@/views/Loading.vue"
+import loading from "@/views/Loading.vue";
+import share from "@/views/sharepage.vue";
 
 Vue.use(VueRouter);
 
@@ -33,6 +34,10 @@ const routes = [
   {
     path: "/loading",
     component : loading
+  },
+  {
+    path: "/share",
+    component : share
   }
 ];
 
