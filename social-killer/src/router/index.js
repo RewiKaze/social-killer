@@ -3,6 +3,7 @@ import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import comment from "../views/Comment.vue";
 import live from "../views/livepage.vue";
+import chat from "@/views/Chat.vue"
 
 Vue.use(VueRouter);
 
@@ -22,7 +23,10 @@ const routes = [
     path: "/live",
     name: "Live",
     component: live
-    
+  },
+  {
+    path: "/chat",
+    component : chat
   }
 ];
 

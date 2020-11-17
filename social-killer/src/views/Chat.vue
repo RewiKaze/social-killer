@@ -1,0 +1,232 @@
+<template>
+  <div class="chatlog">
+    <div class="line-page">
+      <div class="line-outside-border">
+        <div class="header-line">
+          <label class="line-title">Linne</label>
+          <hr />
+        </div>
+        <div class="chat-message p-4">
+          <ul class="list-unstyled chat ml-3 mr-3">
+            <li
+              class="d-flex justify-content-left mb-4 text-left align-items-left"
+            >
+              <img
+                src="https://mdbootstrap.com/img/Photos/Avatars/avatar-6.jpg"
+                alt="avatar"
+                class="avatar rounded-circle ml-0 z-depth-1 pic-pro"
+              />
+              <div class="chat-body white p-3 z-depth-1">
+                <div class="header">
+                  <strong class="primary-font">Kitty</strong>
+                </div>
+                <p class="mb-0">
+                  มึง ลูกค้าไม่สนใจเสื้อผ้าเลยอะ มีแต่คอมเม้นต์อะไรก็ไม่รู้
+                </p>
+              </div>
+            </li>
+            <li
+              class="d-flex justify-content-right mb-4 text-right"
+              style="float: right"
+            >
+              <div class="chat-body white p-3 z-depth-1">
+                <div class="header">
+                  <strong class="primary-font">Me</strong>
+                </div>
+                <div class="mb-0">
+                  <div class="typing">
+                    <span class="circle scaling"></span>
+                    <span class="circle bouncing"></span>
+                    <span class="circle scaling"></span>
+                  </div>
+                </div>
+              </div>
+              <img
+                src="https://mdbootstrap.com/img/Photos/Avatars/avatar-5.jpg"
+                alt="avatar"
+                class="avatar rounded-circle z-depth-1 pic-pro"
+              />
+            </li>
+            <li class="white">
+              <div
+                class="answer-border d-flex justify-content-around align-items-center"
+              >
+                <div class="answer-button d-table p-2">
+                  <span class="answer1 d-table-cell align-middle">
+                    เห้ย พรุ่งนี้อาจจะไม่มีก็ได้ไง55555555
+                  </span>
+                </div>
+                <div class="answer-button d-table p-2">
+                  <span class="answer2 d-table-cell align-middle">
+                    เรื่องปกติแหล่ะ อย่าคิดมากๆ
+                  </span>
+                </div>
+                <div class="answer-button d-table p-2">
+                  <span class="answer3 d-table-cell align-middle">
+                    พูดยากอ่ะ สู้ๆ นะ
+                  </span>
+                </div>
+                <div class="answer-button d-table p-2">
+                  <span class="answer4 d-table-cell align-middle">
+                    ทำใจว่ะ ส่วนใหญ่กูก็เห็นคนที่ไลฟ์โดนกันหมด
+                  </span>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <p class="m-auto d-flex align-items-center" style="width: 100%">
+            โปรดเลือกคำตอบ
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<style>
+.pic-pro {
+  width: 4em;
+  height: 100%;
+}
+
+.line-page {
+  width: 100vw;
+  height: 100vh;
+  color: white;
+  overflow: hidden;
+}
+
+.line-outside-border {
+  border: white solid 0.5px;
+  width: 75%;
+  height: 80%;
+  border-radius: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.chat-message {
+  width: 100%;
+}
+
+.header-line {
+  height: auto;
+  width: 100%;
+}
+
+hr {
+  background-color: white;
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.answer-border {
+  border: white solid 0.5px;
+  width: 95%;
+  height: 20%;
+  border-radius: 30px;
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.line-title {
+  font-family: "Chivo-Light";
+  width: 30%;
+  font-size: 40px;
+  margin-left: 3%;
+  margin-top: 1%;
+  text-align: center;
+}
+
+.typing {
+  display: block;
+  width: 60px;
+  height: 40px;
+  background-color: #BDBDBD;
+  margin-left: 20px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle {
+  display: block;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: #757575;
+  margin: 3px;
+}
+
+.circle.scaling {
+  animation: typing 1000ms ease-in-out infinite;
+  animation-delay: 3600ms;
+}
+
+.circle.bouncing {
+  animation: bounce 1000ms ease-in-out infinite;
+  animation-delay: 3600ms;
+}
+
+.circle:nth-child(1) {
+  animation-delay: 0ms;
+}
+
+.circle:nth-child(2) {
+  animation-delay: 333ms;
+}
+
+.circle:nth-child(3) {
+  animation-delay: 666ms;
+}
+
+@keyframes typing {
+  0% {
+    transform: scale(1);
+  }
+
+  33% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.4);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+
+  33% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.answer-button {
+  background-color: #73000C;
+  width: 14em;
+  height: 4em;
+  text-align: center;
+}
+</style>
