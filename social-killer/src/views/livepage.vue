@@ -31,12 +31,10 @@
             <div class="p-2 icon-1">
               <img src="@/assets/icon/icon5-01.png" width="100%" />
             </div>
-            <div class="p-1 icon-1" style="font-size: 2.5vmin;">
-              854
-            </div>
+            <div class="p-1 icon-1" style="font-size: 2.5vmin">854</div>
           </div>
           <!-- video -->
-          <div class="p-3" style="width: auto;height: 90%;">
+          <div class="p-3" style="width: auto; height: 90%">
             <div
               class="tenor-gif-embed"
               data-postid="17955335"
@@ -68,7 +66,9 @@
             <!-- comment -->
             <b-col cols="5">
               <div class="d-flex flex-column">
-                <div class="p-2 font-weight-bold comment-name">Warawit Rich</div>
+                <div class="p-2 font-weight-bold comment-name">
+                  Warawit Rich
+                </div>
                 <div class="px-2 comment-txt">กูรู้นะ...</div>
                 <div class="px-2 comment-txt">พวกมึงโฟกัสอะไร</div>
               </div>
@@ -97,7 +97,7 @@
           </b-row>
           <!-- !!! End Comment !!! -->
           <!-- !!! One person comemnt !!! -->
-          <b-row id="comment-2" class="p-1" style="display:none;">
+          <b-row id="comment-2" class="p-1" style="display: none">
             <!-- proflie -->
             <b-col cols="3">
               <div class="rounded-circle">
@@ -142,7 +142,7 @@
           </b-row>
           <!-- !!! End Comment !!! -->
           <!-- !!! One person comemnt !!! -->
-          <b-row id="comment-3" class="p-1" style="display:none;">
+          <b-row id="comment-3" class="p-1" style="display: none">
             <!-- proflie -->
             <b-col cols="3">
               <div class="rounded-circle">
@@ -186,7 +186,7 @@
           </b-row>
           <!-- !!! End Comment !!! -->
           <!-- !!! One person comemnt !!! -->
-          <b-row id="comment-4" class="p-1" style="display:none;">
+          <b-row id="comment-4" class="p-1" style="display: none">
             <!-- proflie -->
             <b-col cols="3">
               <div class="rounded-circle">
@@ -230,7 +230,7 @@
           </b-row>
           <!-- !!! End Comment !!! -->
           <!-- !!! One person comemnt !!! -->
-          <b-row id="comment-5" class="p-1" style="display:none;">
+          <b-row id="comment-5" class="p-1" style="display: none">
             <!-- proflie -->
             <b-col cols="3">
               <div class="rounded-circle">
@@ -275,7 +275,7 @@
           </b-row>
           <!-- !!! End Comment !!! -->
           <!-- !!! One person comemnt !!! -->
-          <b-row id="comment-6" class="p-1" style="display:none;">
+          <b-row id="comment-6" class="p-1" style="display: none">
             <!-- proflie -->
             <b-col cols="3">
               <div class="rounded-circle">
@@ -324,78 +324,89 @@
   </div>
 </template>
 <script>
+import router from "@/router";
 // import router from "@/router";
 export default {
   name: "live",
   data() {
     return {
-      num: 2
-    }
+      num: 2,
+    };
   },
   methods: {
     addNextComment(id) {
-      if (document.getElementById(id).classList.contains("clicked")){
-        console.log("Clicked")
+      if (document.getElementById(id).classList.contains("clicked")) {
+        console.log("Clicked");
       } else {
-      document.getElementById("comment-" + this.num).classList.add("comment-fade-in");
-      document.getElementById(id).classList.add("clicked")
-      setTimeout(() => {
-        document.getElementById("comment-" + this.num).style.display = "inline-flex";
-        this.num += 1;
-      }, 300);
-
-      // Show only clicked emoji
-      if (document.getElementById) {
-        var divid = document.getElementById(id);
-        var divs = document.getElementsByClassName("emo-hide-" + (this.num - 1));
-
-        for (var i = 0; i < divs.length; i++) {
-          divs[i].style.display = "none";
-        }
-        divid.classList.add("bounce-in-right");
+        document
+          .getElementById("comment-" + this.num)
+          .classList.add("comment-fade-in");
+        document.getElementById(id).classList.add("clicked");
         setTimeout(() => {
-          divid.style.display = "flex";
+          document.getElementById("comment-" + this.num).style.display =
+            "inline-flex";
+          this.num += 1;
         }, 300);
-      }
-      return false;
+
+        // Show only clicked emoji
+        if (document.getElementById) {
+          var divid = document.getElementById(id);
+          var divs = document.getElementsByClassName(
+            "emo-hide-" + (this.num - 1)
+          );
+
+          for (var i = 0; i < divs.length; i++) {
+            divs[i].style.display = "none";
+          }
+          divid.classList.add("bounce-in-right");
+          setTimeout(() => {
+            divid.style.display = "flex";
+          }, 300);
+        }
+        return false;
       }
     },
     changeToChatPage(id) {
-      if (document.getElementById(id).classList.contains("clicked")){
-        console.log("Clicked")
+      if (document.getElementById(id).classList.contains("clicked")) {
+        console.log("Clicked");
       } else {
-      document.getElementById(id).classList.add("clicked")
-      // ยังไม่เปลี่ยนหน้า
+        document.getElementById(id).classList.add("clicked");
+        // ยังไม่เปลี่ยนหน้า
+        // Show only clicked emoji
+        if (document.getElementById) {
+          var divid = document.getElementById(id);
+          var divs = document.getElementsByClassName(
+            "emo-hide-" + (this.num - 1)
+          );
 
-      // Show only clicked emoji
-      if (document.getElementById) {
-        var divid = document.getElementById(id);
-        var divs = document.getElementsByClassName("emo-hide-" + (this.num - 1));
-
-        for (var i = 0; i < divs.length; i++) {
-          divs[i].style.display = "none";
+          for (var i = 0; i < divs.length; i++) {
+            divs[i].style.display = "none";
+          }
+          divid.classList.add("bounce-in-right");
+          setTimeout(() => {
+            divid.style.display = "flex";
+          }, 300);
+          // change to chat
+          setTimeout(() => {
+            router.push("/chat");
+          }, 2000);
         }
-        divid.classList.add("bounce-in-right");
-        setTimeout(() => {
-          divid.style.display = "flex";
-        }, 300);
+        return false;
       }
-      return false;
-      }
-    }
+    },
   },
   mounted() {
     let recaptchaScript = document.createElement("script");
     recaptchaScript.setAttribute("src", "https://tenor.com/embed.js");
     document.head.appendChild(recaptchaScript);
-  }
+  },
 };
 </script>
 
 <style>
 /* Animation */
 .comment-fade-in {
-	animation: comment-fade-in 0.6s cubic-bezier(0.455, 0.030, 0.515, 0.955) ;
+  animation: comment-fade-in 0.6s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 @keyframes comment-fade-in {
   0% {
@@ -409,7 +420,7 @@ export default {
 }
 
 .bounce-in-right {
-	animation: bounce-in-right 1.5s ease-in ;
+  animation: bounce-in-right 1.5s ease-in;
 }
 @keyframes bounce-in-right {
   0% {
@@ -450,7 +461,6 @@ export default {
 
 /* End Animation */
 .live-page {
-  
   width: 100vw;
   height: 100vh;
   color: white;
@@ -488,7 +498,6 @@ export default {
   font-size: 2.5vmin;
 }
 .comment-txt {
-
   font-family: "ChulaCharas";
   font-size: 2.5vmin;
 }
