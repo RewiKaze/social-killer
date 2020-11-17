@@ -9,43 +9,51 @@
       </div>
       <div class="first-comment" id="first-comment">
         <div class="comment-content">
-          <div class="user">
-            <img
-              class="img-profile"
-              src="@/assets/profile/profile5-01.png"
-              height="50%"
-            />
-            <div class="user-name">
-              <div class="name">แอดมินซ่า คอนเทนต์แซ่บ</div>
-              <div class="timestamp">20 ตุลาคม เวลา 15.30 น.</div>
-            </div>
-            <div class="option">...</div>
-          </div>
-          <div class="comment">
-            <div class="comment-text">
-              หนุ่ม ๆ ดูมันดิ “ขอบีบนมสาว” กลางสยาม ฮาลั่น!!
-            </div>
-            <img src="@/assets/comment/first-comment/web-3.png" width="100%" />
-          </div>
-          <div class="emote">
-            <img
-              @click="changeCommentOneToTwo()"
-              src="@/assets/emoji/emoji-01.png"
-              width="10%"
-            />
-            <img
-              @click="changeCommentOneToTwo()"
-              src="@/assets/emoji/emoji-02.png"
-              width="10%"
-            />
-            <img
-              @click="changeCommentOneToTwo()"
-              src="@/assets/emoji/emoji-03.png"
-              width="10%"
-            />
-            <br />
-            <label class="text-emote">โปรดแสดงความรู้สึกต่อโพสต์นี้</label>
-          </div>
+          <b-row>
+            <b-col>
+              <div class="user">
+                <img
+                  class="img-profile"
+                  src="@/assets/profile/profile5-01.png"
+                  width="20%"
+                />
+                <div class="user-name">
+                  <div class="name">แอดมินซ่า คอนเทนต์แซ่บ</div>
+                  <div class="timestamp">20 ตุลาคม เวลา 15.30 น.</div>
+                </div>
+                <div class="option">...</div>
+              </div>
+              <div class="comment">
+                <div class="comment-text">
+                  หนุ่ม ๆ ดูมันดิ “ขอบีบนมสาว” กลางสยาม ฮาลั่น!!
+                </div>
+                <img
+                  src="@/assets/comment/first-comment/web-3.png"
+                  width="100%"
+                  height="60%"
+                />
+              </div>
+              <div class="emote">
+                <img
+                  @click="changeCommentOneToTwo()"
+                  src="@/assets/emoji/emoji-01.png"
+                  width="10%"
+                />
+                <img
+                  @click="changeCommentOneToTwo()"
+                  src="@/assets/emoji/emoji-02.png"
+                  width="10%"
+                />
+                <img
+                  @click="changeCommentOneToTwo()"
+                  src="@/assets/emoji/emoji-03.png"
+                  width="10%"
+                />
+                <br />
+                <label class="text-emote">โปรดแสดงความรู้สึกต่อโพสต์นี้</label>
+              </div>
+            </b-col>
+          </b-row>
         </div>
         <div class="side-comment">
           <br /><br />
@@ -419,7 +427,7 @@ export default {
   height: 80%;
 }
 .user {
-  height: 25%;
+  height: 20%;
   padding-left: 10px;
 }
 .comment-content {
