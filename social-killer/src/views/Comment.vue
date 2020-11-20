@@ -24,30 +24,33 @@
                 <div class="option">...</div>
               </div>
               <div class="comment">
-                <div class="comment-text">
+                <div class="comment-text" style="margin-left:5%">
                   หนุ่ม ๆ ดูมันดิ “ขอบีบนมสาว” กลางสยาม ฮาลั่น!!
                 </div>
                 <img
                   src="@/assets/comment/first-comment/web-3.png"
-                  width="100%"
-                  height="60%"
+                  width="90%"
+                  height="50%"
+                  style="display: block;
+                      margin-left: auto;
+                      margin-right: auto;"
                 />
               </div>
               <div class="emote">
                 <img
                   @click="changeCommentOneToTwo()"
                   src="@/assets/emoji/emoji-01.png"
-                  width="10%"
+                  width="7.5%"
                 />
                 <img
                   @click="changeCommentOneToTwo()"
                   src="@/assets/emoji/emoji-02.png"
-                  width="10%"
+                  width="7.5%"
                 />
                 <img
                   @click="changeCommentOneToTwo()"
                   src="@/assets/emoji/emoji-03.png"
-                  width="10%"
+                  width="7.5%"
                 />
                 <br />
                 <label class="text-emote">โปรดแสดงความรู้สึกต่อโพสต์นี้</label>
@@ -110,17 +113,17 @@
             <img
               @click="changeCommentTwoToThree()"
               src="@/assets/emoji/emoji-01.png"
-              width="10%"
+              width="7.5%"
             />
             <img
               @click="changeCommentTwoToThree()"
               src="@/assets/emoji/emoji-02.png"
-              width="10%"
+              width="7.5%"
             />
             <img
               @click="changeCommentTwoToThree()"
               src="@/assets/emoji/emoji-03.png"
-              width="10%"
+              width="7.5%"
             />
             <br />
             <label class="text-emote">โปรดแสดงความรู้สึกต่อโพสต์นี้</label>
@@ -153,7 +156,7 @@
             <img
               class="img-profile"
               src="@/assets/profile/profile6-01.png"
-              height="50%"
+              height="50vw"
             />
             <div class="user-name">
               <div class="name">Kitty</div>
@@ -197,8 +200,8 @@
                 border-radius: 10px;
               "
             >
-              <div style="">
-                Somsak Kumkom<br />อยากเมนส์ไม่มาสัก 9 เดือนป่าวน้อง
+              <div style="font-family:'ChulaCharas'; font-size:1vw">
+                <div style="font-weight: bold;">Somsak Kumkom</div>อยากเมนส์ไม่มาสัก 9 เดือนป่าวน้อง
                 เดี๋ยวพี่ช่วย
               </div>
             </div>
@@ -207,17 +210,17 @@
             <img
               @click="changeToLivePage"
               src="@/assets/emoji/emoji-01.png"
-              width="10%"
+              width="7.5%"
             />
             <img
               @click="changeToLivePage"
               src="@/assets/emoji/emoji-02.png"
-              width="10%"
+              width="7.5%"
             />
             <img
               @click="changeToLivePage"
               src="@/assets/emoji/emoji-03.png"
-              width="10%"
+              width="7.5%"
             />
             <br />
             <label class="text-emote">โปรดแสดงความรู้สึกต่อโพสต์นี้</label>

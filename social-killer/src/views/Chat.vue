@@ -20,7 +20,7 @@
                 <div class="header">
                   <strong class="primary-font">Kitty</strong>
                 </div>
-                <p class="mb-0">
+                <p class="mb-0 chat-text">
                   มึง ลูกค้าไม่สนใจเสื้อผ้าเลยอะ มีแต่คอมเม้นต์อะไรก็ไม่รู้
                 </p>
               </div>
@@ -38,7 +38,7 @@
                     <span class="circle scaling"></span>
                     <span class="circle bouncing"></span>
                     <span class="circle scaling"></span>
-                  </div>
+                  </div>    
                 </div>
               </div>
               <img
@@ -49,7 +49,7 @@
             </li>
             <li class="white">
               <div
-                class="answer-border d-flex justify-content-around align-items-center"
+                class="answer-border d-flex justify-content-around align-items-center answer-text"
               >
                 <div class="answer-button d-table p-2">
                   <span class="answer1 d-table-cell align-middle">
@@ -82,6 +82,7 @@
             left: 50%;
             transform: translateX(-50%);
             margin: 0;
+            font-size:1vw
           "
         >
           โปรดเลือกคำตอบ
@@ -92,6 +93,25 @@
 </template>
 
 <style>
+.primary-font{
+  font-size: 1.5vw;
+}
+.answer-button:hover{
+  filter: brightness(2);
+  transition: 0.5s;
+  cursor:pointer;
+}
+.answer-text{
+  font-size:1vw
+}
+
+.chat-text{
+  font-size: 1.3vw;
+}
+.chatlog{
+  font-family: "ChulaCharas";
+
+}
 .pic-pro {
   width: 4em;
   height: 100%;
