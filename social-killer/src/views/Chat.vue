@@ -20,7 +20,7 @@
                 <div class="header">
                   <strong class="primary-font">Kitty</strong>
                 </div>
-                <p class="mb-0 chat-text">
+                <p class="mb-0 chat-text" id="friend-chat">
                   มึง ลูกค้าไม่สนใจเสื้อผ้าเลยอะ มีแต่คอมเม้นต์อะไรก็ไม่รู้
                 </p>
               </div>
@@ -33,7 +33,7 @@
                 <div class="header">
                   <strong class="primary-font">Me</strong>
                 </div>
-                <div class="mb-0">
+                <div class="mb-0" id="user-answer">
                   <div class="typing">
                     <span class="circle scaling"></span>
                     <span class="circle bouncing"></span>
@@ -47,28 +47,52 @@
                 class="avatar rounded-circle z-depth-1 pic-pro"
               />
             </li>
-            <li class="white">
-              <div
+            <li class="white" id="block-answer">
+              <div v-if="userQuestion == 1"
                 class="answer-border d-flex justify-content-around align-items-center answer-text"
               >
-                <div class="answer-button d-table p-2">
+                <div class="answer-button d-table p-2" id="answer1" @click="showAnswer($event)">
                   <span class="answer1 d-table-cell align-middle">
                     เห้ย พรุ่งนี้อาจจะไม่มีก็ได้ไง55555555
                   </span>
                 </div>
-                <div class="answer-button d-table p-2">
+                <div class="answer-button d-table p-2" id="answer2" @click="showAnswer($event)">
                   <span class="answer2 d-table-cell align-middle">
                     เรื่องปกติแหล่ะ อย่าคิดมากๆ
                   </span>
                 </div>
-                <div class="answer-button d-table p-2">
+                <div class="answer-button d-table p-2" id="answer3" @click="showAnswer($event)">
                   <span class="answer3 d-table-cell align-middle">
                     พูดยากอ่ะ สู้ๆ นะ
                   </span>
                 </div>
-                <div class="answer-button d-table p-2">
+                <div class="answer-button d-table p-2" id="answer4" @click="showAnswer($event)">
                   <span class="answer4 d-table-cell align-middle">
                     ทำใจว่ะ ส่วนใหญ่กูก็เห็นคนที่ไลฟ์โดนกันหมด
+                  </span>
+                </div>
+              </div>
+              <div v-if="userQuestion == 2"
+                class="answer-border d-flex justify-content-around align-items-center answer-text"
+              >
+                <div class="answer-button d-table p-2" id="answer1" @click="showAnswer($event)">
+                  <span class="answer1 d-table-cell align-middle">
+                    Changed
+                  </span>
+                </div>
+                <div class="answer-button d-table p-2" id="answer2" @click="showAnswer($event)">
+                  <span class="answer2 d-table-cell align-middle">
+                    Changed
+                  </span>
+                </div>
+                <div class="answer-button d-table p-2" id="answer3" @click="showAnswer($event)">
+                  <span class="answer3 d-table-cell align-middle">
+                    Changed
+                  </span>
+                </div>
+                <div class="answer-button d-table p-2" id="answer4" @click="showAnswer($event)">
+                  <span class="answer4 d-table-cell align-middle">
+                    Changed
                   </span>
                 </div>
               </div>
@@ -257,4 +281,73 @@ hr {
   height: 4em;
   text-align: center;
 }
+
+@keyframes fade-in-bottom {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.fade-in-bottom {
+	animation: fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+.fade-out {
+	animation: fade-out 1s ease-out both;
+}
+.fade-in {
+	animation: fade-out 1s ease-out both reverse;
+}
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 </style>
+<script>
+// Fade-out and fade in 1s
+export default {
+  name:"chat",
+  data() {
+    return {
+      userQuestion: 1,
+    };
+  },
+  methods:{
+    showAnswer(data){
+      document.getElementById('user-answer').innerHTML= "<div class='chat-text fade-in-bottom'>"+data.currentTarget.innerText+"</div>";
+      document.getElementById('block-answer').classList.add('fade-out');
+      setTimeout(()=>{
+        document.getElementById('block-answer').style.display = 'none';
+      },1000)
+      setTimeout(()=>{
+        document.getElementById('friend-chat').innerHTML= '<div class="typing fade-in">'+
+                    '<span class="circle scaling"></span>'+
+                    '<span class="circle bouncing"></span>'+
+                    '<span class="circle scaling"></span>'+
+                  '</div>' 
+      },2000)
+      setTimeout(()=>{
+        this.userQuestion++;
+        document.getElementById('friend-chat').innerHTML = "จีงปะ"
+        document.getElementById('friend-chat').classList.add('fade-in-bottom  ');
+        document.getElementById('block-answer').style.display = 'list-item';
+        document.getElementById('block-answer').classList.remove('fade-out');
+        document.getElementById('block-answer').classList.add('fade-in');
+        document.getElementById('user-answer').innerHTML= '<div class="typing fade-in">'+
+                    '<span class="circle scaling"></span>'+
+                    '<span class="circle bouncing"></span>'+
+                    '<span class="circle scaling"></span>'+
+                  '</div>' 
+      },5000)
+      // console.log(data.currentTarget.innerText);
+    }
+  }
+}
+</script>
