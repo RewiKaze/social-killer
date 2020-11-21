@@ -336,7 +336,7 @@ export default {
       setTimeout(()=>{
         this.userQuestion++;
         document.getElementById('friend-chat').innerHTML = "จีงปะ"
-        document.getElementById('friend-chat').classList.add('fade-in-bottom  ');
+        document.getElementById('friend-chat').classList.add('fade-in-bottom');
         document.getElementById('block-answer').style.display = 'list-item';
         document.getElementById('block-answer').classList.remove('fade-out');
         document.getElementById('block-answer').classList.add('fade-in');
