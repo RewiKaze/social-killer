@@ -484,6 +484,7 @@ hr {
 
 </style>
 <script>
+import router from "@/router"
 // Fade-out and fade in 1s
 export default {
   name:"chat",
@@ -561,6 +562,9 @@ export default {
         this.wait3 = true
         this.userQuestion++
       },5000)
+      setTimeout(()=>{
+        router.push("/livecam")
+      },9000)
     }
   }
 }
