@@ -19,8 +19,9 @@ h1,p {
 	margin: auto;
 	display: block;
 }
-.skip {
+.menu {
 	text-align: center;
+	color: white;
 }
 .warning-content{
 	margin-top: 9%;
