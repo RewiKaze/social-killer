@@ -3,29 +3,35 @@
     <div class="container">
 		<div class="row align-items-center" id="content">
 			<div class="col-8 frame">
-				<div class="text-center warning-content">
-					<h1 id="header-warning">Warning</h1>
-					<br>
-					<p class="exam"> <!-- ChulaCharasNewReg -->แบบทดสอบต่อจากนี้ไม่ได้มีจุดประสงค์ที่จะบังคับหรือยัดเยียดความเป็น
-					sexual harrassment ให้กับผู้เข้าเล่น แต่ต้องการเพียงที่จะให้ความรู้และ
-					ความเข้าใจเพิ่มเติมเกี่ยวกับเรื่องการ sexual harassment บนสื่อออนไลน์
-					หากผู้ใดทดลองเล่นแล้วไม่ประสงค์ที่จะเล่นต่อ
-					สามารถกด skip ไปอ่านในหน้าบทสรุปได้</p>
+				<div class="col frame" style="height: 45vh; margin-top: 16px">
+					<div class="text-center warning-content">
+						<h1 class="font-warning">Warning</h1>
+						<br>
+						<p class="exam">แบบทดสอบต่อจากนี้ไม่ได้มีจุดประสงค์ที่จะบังคับหรือยัดเยียดความเป็น
+							sexual harrassment ให้กับผู้เข้าเล่น แต่ต้องการเพียงที่จะให้ความรู้และ
+							ความเข้าใจเพิ่มเติมเกี่ยวกับเรื่องการ sexual harassment บนสื่อออนไลน์
+							หากผู้ใดทดลองเล่นแล้วไม่ประสงค์ที่จะเล่นต่อ
+						สามารถกด skip ไปอ่านในหน้าบทสรุปได้</p>
+					</div>
 				</div>
 			</div>
 		</div>
 		<br>
-		<p class="blink-1">Skip</p>
+		<p class="blink-loop skip" @click="skipped()">Skip</p>
 	</div>
 </div>
 </template>
 
 <style>
+.font-warning{
+    font-family: "Inconsolata-Expanded-Bold";
+}
+.blink-loop{
+    animation: blink-1 5s both infinite;
+}
 .warning{
-    /* font-family: ;   w */
     color:white;
     width: 100vw;
-    font-family: "ChulaCharas";
 
 }
 #content{
@@ -46,14 +52,36 @@
 	display: block;
 }
 .skip {
-	text-align: center;
+    text-align: center;
+    color: white;
+    font-size: 1.2vw;
+    cursor:pointer;
 }
 .warning-content{
 	margin-top: 9%;
 }
 .exam {
-	font-family: "ChulaCharasNewReg";
-    /*font-size: 30px;*/
+	font-family: "ChulaCharas";
+    font-size: 1.5vw;
     text-align: center;
 }
+
+
 </style>
+
+<script>
+import router from "@/router"
+export default {
+    name: "warning",
+    mounted(){
+        setTimeout(()=>{
+            router.push('/livecam')
+        },8000)
+    },
+    methods:{
+        skipped(){
+            router.push('/conclude')
+        }
+    }
+}
+</script>

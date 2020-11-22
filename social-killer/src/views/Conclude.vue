@@ -1,24 +1,21 @@
 <template>
 <div class="conclude-final">
     <div class="container-fluid h-100">
-
         <div class="conclude-content-box">
             <div class="row">
                 <div class="col-12">
                     <div class="HeadSocial">SOCIAL</div>
                     <div class="HeadSocial">KILLER</div>
                     <div class="HeadLevel">ระดับความ Sexual Harrasment บนโซเชียลของคุณ</div>
-                    <div class="pie-chart" :data-percentage="totalScore"><!-- ใส่local stateตรงนี้จ้า เต็ม100 -->
+                    <div class="pie-chart" :data-percentage="result"><!-- ใส่local stateตรงนี้จ้า เต็ม100 -->
                         <svg viewBox="-100 -100 200 200">
                             <path d="" />
                         </svg>
                     </div>
-                    <div class="Level-con">ระดับ...</div>
+                    <div class="Level-con">ระดับ {{level}}</div>
                 </div>
             </div>
         </div>
-
-
 
         <div class="conclude-content-box2">
             <div class="row">
@@ -414,13 +411,27 @@ export default {
     },
     data(){
         return{
-            totalScore:0
+            totalScore:0,
+            level:0,
+            result:0
         }
     },
     created(){
-this.totalScore += parseInt(sessionStorage.getItem('scoreComment'))
+        this.totalScore += parseInt(sessionStorage.getItem('scoreComment'))
         this.totalScore += parseInt(sessionStorage.getItem('scoreChat'))
         this.totalScore += parseInt(sessionStorage.getItem('livePageScore'))
+        this.result = (this.totalScore/60) * 100
+        if(this.totalScore < 12){
+            this.level = 1
+        }else if(this.totalScore >= 12 && this.totalScore <= 24){
+            this.level = 2
+        }else if(this.totalScore >= 25 && this.totalScore <= 36){
+            this.level = 3
+        }else if(this.totalScore >= 37 && this.totalScore <= 48){
+            this.level = 4
+        }else if(this.totalScore >= 49 && this.totalScore <= 60){
+            this.level = 5
+        }
     }
     
 }

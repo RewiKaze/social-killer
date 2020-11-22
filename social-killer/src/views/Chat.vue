@@ -576,7 +576,7 @@ export default {
       },5000)
       setTimeout(()=>{
         sessionStorage.setItem('scoreChat',this.scoreChat)
-        router.push("/livecam")
+        router.push("/warning")
       },9000)
     }
   },
