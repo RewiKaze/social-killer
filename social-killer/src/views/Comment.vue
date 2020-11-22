@@ -7,7 +7,7 @@
         <!-- <img src="@/assets/icon/icon1-01.png" width="10%" /> -->
         <hr />
       </div>
-      <div class="first-comment" id="first-comment" >
+      <div class="first-comment" id="first-comment">
         <div class="comment-content">
           <b-row>
             <b-col>
@@ -40,17 +40,17 @@
                 <img
                   @click="changeCommentOneToTwo()"
                   src="@/assets/emoji/emoji-01.png"
-                  width="7.5%"
+                  width="70vw"
                 />
                 <img
                   @click="changeCommentOneToTwo()"
                   src="@/assets/emoji/emoji-02.png"
-                  width="7.5%"
+                  width="70vw"
                 />
                 <img
                   @click="changeCommentOneToTwo()"
                   src="@/assets/emoji/emoji-03.png"
-                  width="7.5%"
+                  width="70vw"
                 />
                 <br />
                 <label class="text-emote">โปรดแสดงความรู้สึกต่อโพสต์นี้</label>
@@ -113,17 +113,17 @@
             <img
               @click="changeCommentTwoToThree()"
               src="@/assets/emoji/emoji-01.png"
-              width="7.5%"
+              width="70vw"
             />
             <img
               @click="changeCommentTwoToThree()"
               src="@/assets/emoji/emoji-02.png"
-              width="7.5%"
+              width="70vw"
             />
             <img
               @click="changeCommentTwoToThree()"
               src="@/assets/emoji/emoji-03.png"
-              width="7.5%"
+              width="70vw"
             />
             <br />
             <label class="text-emote">โปรดแสดงความรู้สึกต่อโพสต์นี้</label>
@@ -208,19 +208,19 @@
           </div>
           <div class="emote">
             <img
-              @click="changeToLivePage"
+              @click="changeCommentThreeToFour()"
               src="@/assets/emoji/emoji-01.png"
-              width="7.5%"
+              width="70vw"
             />
             <img
-              @click="changeToLivePage"
+              @click="changeCommentThreeToFour()"
               src="@/assets/emoji/emoji-02.png"
-              width="7.5%"
+              width="70vw"
             />
             <img
-              @click="changeToLivePage"
+              @click="changeCommentThreeToFour()"
               src="@/assets/emoji/emoji-03.png"
-              width="7.5%"
+              width="70vw"
             />
             <br />
             <label class="text-emote">โปรดแสดงความรู้สึกต่อโพสต์นี้</label>
@@ -252,26 +252,26 @@
           <div class="user">
             <img
               class="img-profile"
-              src="@/assets/profile/profile2-01.png"
+              src="@/assets/profile/profile5-01.png"
                width="150vw"
             />
             <div class="user-name">
-              <div class="name">Teerapong Mindee</div>
-              <div class="timestamp">23 ตุลาคม เวลา 20.56 น.</div>
+              <div class="name">แอดมินซ่า คอนเทนต์แซ่บ</div>
+              <div class="timestamp">20 ตุลาคม เวลา 15.30 น.</div>
             </div>
             <div class="option">...</div>
           </div>
           <div class="comment">
-            <div class="forth-comment-text">
-              
+            <div class="forth-comment-text" style="position:relative; cursor:pointer" @click="changeToLivePage()" >
+              <img src="@/assets/emoji/play1-01.png" width="300vw" style="position:absolute; top:50%; left:50%; transform: translate(-50%, -50%);">
             </div>
           </div>
           <div class="like-section">
             <div class="like" style="height: auto">
               <div class="like-status">
-                <b-icon-hand-thumbs-up></b-icon-hand-thumbs-up> {{ numLike }}
+                <b-icon-hand-thumbs-up></b-icon-hand-thumbs-up> 331
               </div>
-              <div class="comment-share">ความคิดเห็น 5 รายการ แชร์ 1 ครั้ง</div>
+              <div class="comment-share">ความคิดเห็น 1,100 รายการ แชร์ 73 ครั้ง</div>
             </div>
             <br />
             <hr />
@@ -350,6 +350,17 @@ export default {
         document.getElementById("third-comment").style.display = "block";
       }, 600);
     },
+    changeCommentThreeToFour() {
+      document
+        .getElementById("third-comment")
+        .classList.remove("fade-in-bottom");
+      document.getElementById("third-comment").classList.add("fade-out-top");
+      document.getElementById("forth-comment").classList.add("fade-in-bottom");
+      setTimeout(() => {
+        document.getElementById("third-comment").style.display = "none";
+        document.getElementById("forth-comment").style.display = "block";
+      }, 600);
+    },
     changeToLivePage() {
       router.push("/live");
     },
@@ -400,8 +411,8 @@ export default {
   padding-left: 30px;
 }
 .second-comment-text {
-  height: 5em;
-  font-size: 35px;
+  height: 10em;
+  font-size: 2vw;
   background-color: white;
   color: black;
   text-align: center;
@@ -431,7 +442,7 @@ export default {
 .text-emote {
   margin-top: 10px;
   font-family: "ChulaCharas";
-  font-size: 15px;
+  font-size: 1vw;
 }
 .emote {
   margin-top: 20px;
@@ -451,7 +462,7 @@ export default {
   position: relative;
 }
 .comment-text {
-  font-size: 20px;
+  font-size: 1vw;
 }
 .comment-content,
 .side-comment {

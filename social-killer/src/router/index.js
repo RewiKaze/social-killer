@@ -13,8 +13,8 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: "/",
-    name: "Home",
-    component: Home
+    name: "loading",
+    component: loading
   },
   {
     path: "/comment",
@@ -32,8 +32,8 @@ const routes = [
     component : chat
   },
   {
-    path: "/loading",
-    component : loading
+    path: "/home",
+    component : Home
   },
   {
     path: "/share",
@@ -50,5 +50,5 @@ const router = new VueRouter({
   base: process.env.BASE_URL,
   routes
 });
-
+  
 export default router;
