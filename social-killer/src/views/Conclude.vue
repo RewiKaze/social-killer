@@ -8,7 +8,7 @@
                     <div class="HeadSocial">SOCIAL</div>
                     <div class="HeadSocial">KILLER</div>
                     <div class="HeadLevel">ระดับความ Sexual Harrasment บนโซเชียลของคุณ</div>
-                    <div class="pie-chart" data-percentage="70"><!-- ใส่local stateตรงนี้จ้า เต็ม100 -->
+                    <div class="pie-chart" :data-percentage="totalScore"><!-- ใส่local stateตรงนี้จ้า เต็ม100 -->
                         <svg viewBox="-100 -100 200 200">
                             <path d="" />
                         </svg>
@@ -346,6 +346,7 @@ import router from "@/router"
 export default {
     name: "conclude",
     mounted(){
+        
         document.getElementById("head").classList.add("fade-in")
         setTimeout(function () {
             document.getElementById("result-first").style.opacity = '100%';
@@ -404,11 +405,23 @@ export default {
             document.querySelectorAll('h3')[0].innerHTML = percentage + '%';
 
         }
+        
     },
     methods:{
         toSharePage(){
             router.push("/share")
         }
+    },
+    data(){
+        return{
+            totalScore:0
+        }
+    },
+    created(){
+this.totalScore += parseInt(sessionStorage.getItem('scoreComment'))
+        this.totalScore += parseInt(sessionStorage.getItem('scoreChat'))
+        this.totalScore += parseInt(sessionStorage.getItem('livePageScore'))
     }
+    
 }
 </script>
