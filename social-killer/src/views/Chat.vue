@@ -275,6 +275,9 @@
 </template>
 
 <style>
+.mb-4, .my-4{
+  margin-bottom: 0 !important;
+}
 .primary-font{
   font-size: 1.5vw;
 }
