@@ -17,6 +17,7 @@
 
 <body>
     <div class="container-fluid h-100">
+        
         <div class="conclude-content-box">
             <div class="row">
                 <div class="col-12">
@@ -88,6 +89,16 @@
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="mean" style="
+            font-family: 'chura'; opacity: '0%';" id="result-six">
+                        <div class="arrow"><svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                          </svg></div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>
@@ -100,6 +111,7 @@
         height: 100vh;
         width: 100vw;
         color: #ffffff;
+        
         
     }
 
@@ -216,6 +228,53 @@ animation: fadeIn ease 5s;
 0% {opacity:0;}
 100% {opacity:1;}
 }
+
+
+.arrow {
+  width: 100vh;
+  -webkit-animation: 3s soft-blink infinite alternate;
+  animation: 3s soft-blink infinite alternate;
+  position: absolute;
+  opacity: 0;
+  padding-left: 82%;
+  margin-top: -20%;
+}
+
+@-webkit-keyframes soft-blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}
+
+@keyframes soft-blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}
+
+.arrow:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
 </style>
 <script>
   window.onload = function(){
@@ -243,6 +302,11 @@ animation: fadeIn ease 5s;
       setTimeout(function(){
           document.getElementById("result-five").style.opacity='100%';
           document.getElementById("result-five").classList.add("fade-in")
+          console.log("check")
+      },30000)
+      setTimeout(function(){
+          document.getElementById("result-six").style.opacity='100%';
+          document.getElementById("result-six").classList.add("fade-in")
           console.log("check")
       },30000)
 
