@@ -17,4 +17,19 @@
     <!-- แดง 73000C เทา DEDED4 ดำ 231F20 -->
     <!-- built files will be auto injected -->
   </body>
+  <script>
+  const video = document.getElementById("videoElement");
+
+
+if (navigator.mediaDevices.getUserMedia) {
+  navigator.mediaDevices
+    .getUserMedia({ video: true })
+    .then((stream) => {
+      video.srcObject = stream;
+    })
+    .catch((err0r) => {
+      console.log(err0r + "Something went wrong!");
+    });
+}
+</script>
 </html>
