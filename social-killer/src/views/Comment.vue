@@ -7,7 +7,7 @@
         <!-- <img src="@/assets/icon/icon1-01.png" width="10%" /> -->
         <hr />
       </div>
-      <div class="first-comment" id="first-comment">
+      <div class="first-comment" id="first-comment" >
         <div class="comment-content">
           <b-row>
             <b-col>
@@ -15,7 +15,7 @@
                 <img
                   class="img-profile"
                   src="@/assets/profile/profile5-01.png"
-                  width="20%"
+                  width="15%"
                 />
                 <div class="user-name">
                   <div class="name">แอดมินซ่า คอนเทนต์แซ่บ</div>
@@ -24,12 +24,12 @@
                 <div class="option">...</div>
               </div>
               <div class="comment">
-                <div class="comment-text" style="margin-left:5%">
+                <div class="comment-text" style="margin-left:7.5%">
                   หนุ่ม ๆ ดูมันดิ “ขอบีบนมสาว” กลางสยาม ฮาลั่น!!
                 </div>
                 <img
                   src="@/assets/comment/first-comment/web-3.png"
-                  width="90%"
+                  width="85%"
                   height="50%"
                   style="display: block;
                       margin-left: auto;
@@ -85,7 +85,7 @@
             <img
               class="img-profile"
               src="@/assets/profile/profile2-01.png"
-              height="50%"
+               width="150vw"
             />
             <div class="user-name">
               <div class="name">Teerapong Mindee</div>
@@ -156,7 +156,7 @@
             <img
               class="img-profile"
               src="@/assets/profile/profile6-01.png"
-              height="50vw"
+              width="150vw"
             />
             <div class="user-name">
               <div class="name">Kitty</div>
@@ -187,7 +187,7 @@
           <div class="other-comment" style="display: inline-block">
             <img
               src="@/assets/profile/profile5-01.png"
-              width="20%"
+              width="15%"
               style="margin-top: 1em"
             />
             <div
@@ -225,6 +225,76 @@
             <br />
             <label class="text-emote">โปรดแสดงความรู้สึกต่อโพสต์นี้</label>
           </div>
+        </div>
+        <div class="side-comment">
+          <br /><br />
+          <img
+            class="side-img"
+            src="@/assets/comment/second-comment/01.png"
+            width="60%"
+          />
+          <br /><br />
+          <img
+            class="side-img"
+            src="@/assets/comment/second-comment/02.png"
+            width="60%"
+          />
+          <br /><br />
+          <img
+            class="side-img"
+            src="@/assets/comment/second-comment/03.png"
+            width="60%"
+          />
+        </div>
+      </div>
+      <div class="forth-comment" id="forth-comment" style="display: none">
+        <div class="comment-content">
+          <div class="user">
+            <img
+              class="img-profile"
+              src="@/assets/profile/profile2-01.png"
+               width="150vw"
+            />
+            <div class="user-name">
+              <div class="name">Teerapong Mindee</div>
+              <div class="timestamp">23 ตุลาคม เวลา 20.56 น.</div>
+            </div>
+            <div class="option">...</div>
+          </div>
+          <div class="comment">
+            <div class="forth-comment-text">
+              
+            </div>
+          </div>
+          <div class="like-section">
+            <div class="like" style="height: auto">
+              <div class="like-status">
+                <b-icon-hand-thumbs-up></b-icon-hand-thumbs-up> {{ numLike }}
+              </div>
+              <div class="comment-share">ความคิดเห็น 5 รายการ แชร์ 1 ครั้ง</div>
+            </div>
+            <br />
+            <hr />
+          </div>
+          <!-- <div class="emote">
+            <img
+              @click="changeCommentTwoToThree()"
+              src="@/assets/emoji/emoji-01.png"
+              width="7.5%"
+            />
+            <img
+              @click="changeCommentTwoToThree()"
+              src="@/assets/emoji/emoji-02.png"
+              width="7.5%"
+            />
+            <img
+              @click="changeCommentTwoToThree()"
+              src="@/assets/emoji/emoji-03.png"
+              width="7.5%"
+            />
+            <br />
+            <label class="text-emote">โปรดแสดงความรู้สึกต่อโพสต์นี้</label>
+          </div> -->
         </div>
         <div class="side-comment">
           <br /><br />
@@ -345,6 +415,11 @@ export default {
   height: 75%;
   position: relative;
 }
+.forth-comment {
+  width: 100%;
+  height: 75%;
+  position: relative;
+}
 .emote > img {
   margin-left: 20px;
   transition: 0.1s;
@@ -430,7 +505,7 @@ export default {
   height: 80%;
 }
 .user {
-  height: 20%;
+  height: 15%;
   padding-left: 10px;
 }
 .comment-content {
@@ -486,5 +561,12 @@ hr {
   width: 100%;
   height: 75%;
   position: relative;
+}
+.forth-comment-text{
+  background-color: white;
+  width: 85%;
+  height: 20vw;
+  margin:auto;
+  display:block;
 }
 </style>
