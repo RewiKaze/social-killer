@@ -37,7 +37,7 @@
         </b-col>
         <b-col cols="4" class="comment-live border-left border-light py-3" style="color:white;">
         <!-- !!! One person comemnt !!! -->
-          <b-row id="comment-1" class="p-1 slide-top">
+          <b-row id="comment-1" class="p-2 slide-top">
             <!-- proflie -->
             <b-col cols="3">
               <div class="rounded-circle">
@@ -59,7 +59,7 @@
           </b-row>
           <!-- !!! End Comment !!! -->
           <!-- !!! One person comemnt !!! -->
-          <b-row id="comment-2" class="p-1 slide-top" style="display:none;">
+          <b-row id="comment-2" class="p-2 slide-top" style="display:none;">
             <!-- proflie -->
             <b-col cols="3">
               <div class="rounded-circle">
@@ -83,7 +83,7 @@
           </b-row>
           <!-- !!! End Comment !!! -->
           <!-- !!! One person comemnt !!! -->
-          <b-row id="comment-3" class="p-1 slide-top" style="display:none;">
+          <b-row id="comment-3" class="p-2 slide-top" style="display:none;">
             <!-- proflie -->
             <b-col cols="3">
               <div class="rounded-circle">
@@ -106,7 +106,7 @@
           </b-row>
           <!-- !!! End Comment !!! -->
           <!-- !!! One person comemnt !!! -->
-          <b-row id="comment-4" class="p-1 slide-top" style="display:none;">
+          <b-row id="comment-4" class="p-2 slide-top" style="display:none;">
             <!-- proflie -->
             <b-col cols="3">
               <div class="rounded-circle">
@@ -129,7 +129,7 @@
           </b-row>
           <!-- !!! End Comment !!! -->
           <!-- !!! One person comemnt !!! -->
-          <b-row id="comment-5" class="p-1 slide-top" style="display:none;">
+          <b-row id="comment-5" class="p-2 slide-top" style="display:none;">
             <!-- proflie -->
             <b-col cols="3">
               <div class="rounded-circle">
@@ -153,7 +153,7 @@
           </b-row>
           <!-- !!! End Comment !!! -->
           <!-- !!! One person comemnt !!! -->
-          <b-row id="comment-6" class="p-1 slide-top" style="display:none;">
+          <b-row id="comment-6" class="p-2 slide-top" style="display:none;">
             <!-- proflie -->
             <b-col cols="3">
               <div class="rounded-circle">
@@ -176,7 +176,7 @@
           </b-row>
           <!-- !!! End Comment !!! -->
           <!-- !!! One person comemnt !!! -->
-          <b-row id="comment-7" class="p-1 slide-top" style="display:none;">
+          <b-row id="comment-7" class="p-2 slide-top" style="display:none;">
             <!-- proflie -->
             <b-col cols="3">
               <div class="rounded-circle">
@@ -200,7 +200,7 @@
           </b-row>
           <!-- !!! End Comment !!! -->
           <!-- !!! One person comemnt !!! -->
-          <b-row id="comment-8" class="p-1 slide-top" style="display:none;">
+          <b-row id="comment-8" class="p-2 slide-top" style="display:none;">
             <!-- proflie -->
             <b-col cols="3">
               <div class="rounded-circle">
@@ -223,7 +223,7 @@
           </b-row>
           <!-- !!! End Comment !!! -->
           <!-- !!! One person comemnt !!! -->
-          <b-row id="comment-9" class="p-1 slide-top" style="display:none;">
+          <b-row id="comment-9" class="p-2 slide-top" style="display:none;">
             <!-- proflie -->
             <b-col cols="3">
               <div class="rounded-circle">
@@ -247,7 +247,7 @@
           </b-row>
           <!-- !!! End Comment !!! -->
           <!-- !!! One person comemnt !!! -->
-          <b-row id="comment-10" class="p-1 slide-top" style="display:none;">
+          <b-row id="comment-10" class="p-2 slide-top" style="display:none;">
             <!-- proflie -->
             <b-col cols="3">
               <div class="rounded-circle">
@@ -269,7 +269,7 @@
           </b-row>
           <!-- !!! End Comment !!! -->
           <!-- !!! One person comemnt !!! -->
-          <b-row id="comment-11" class="p-1 slide-top" style="display:none;">
+          <b-row id="comment-11" class="p-2 slide-top" style="display:none;">
             <!-- proflie -->
             <b-col cols="3">
               <div class="rounded-circle">
@@ -292,7 +292,7 @@
           </b-row>
           <!-- !!! End Comment !!! -->
           <!-- !!! One person comemnt !!! -->
-          <b-row id="comment-12" class="p-1 slide-top" style="display:none;">
+          <b-row id="comment-12" class="p-2 slide-top" style="display:none;">
             <!-- proflie -->
             <b-col cols="3">
               <div class="rounded-circle">
@@ -315,7 +315,7 @@
           </b-row>
           <!-- !!! End Comment !!! -->
           <!-- !!! One person comemnt !!! -->
-          <b-row id="comment-13" class="p-1 slide-top" style="display:none;">
+          <b-row id="comment-13" class="p-2 slide-top" style="display:none;">
             <!-- proflie -->
             <b-col cols="3">
               <div class="rounded-circle">
@@ -339,7 +339,7 @@
           </b-row>
           <!-- !!! End Comment !!! -->
           <!-- !!! One person comemnt !!! -->
-          <b-row id="comment-14" class="p-1 slide-top" style="display:none;">
+          <b-row id="comment-14" class="p-2 slide-top" style="display:none;">
             <!-- proflie -->
             <b-col cols="3">
               <div class="rounded-circle">
@@ -485,51 +485,51 @@ export default {
   mounted(){
     setTimeout(() => {
   document.getElementById("comment-2").style.display = "flex";
-}, 2000);
-setTimeout(() => {
-  document.getElementById("comment-3").style.display = "flex";
 }, 4000);
 setTimeout(() => {
-  document.getElementById("comment-4").style.display = "flex";
-}, 6000);
-setTimeout(() => {
-  document.getElementById("comment-5").style.display = "flex";
+  document.getElementById("comment-3").style.display = "flex";
 }, 8000);
 setTimeout(() => {
+  document.getElementById("comment-4").style.display = "flex";
+}, 12000);
+setTimeout(() => {
+  document.getElementById("comment-5").style.display = "flex";
+}, 16000);
+setTimeout(() => {
   document.getElementById("comment-6").style.display = "flex";
-}, 10000);
+}, 20000);
 setTimeout(() => {
   document.getElementById("comment-7").style.display = "flex";
   document.getElementById("comment-1").style.display = "none";
-}, 12000);
+}, 24000);
 setTimeout(() => {
   document.getElementById("comment-8").style.display = "flex";
   document.getElementById("comment-2").style.display = "none";
-}, 14000);
+}, 28000);
 setTimeout(() => {
   document.getElementById("comment-9").style.display = "flex";
   document.getElementById("comment-3").style.display = "none";
-}, 16000);
+}, 32000);
 setTimeout(() => {
   document.getElementById("comment-10").style.display = "flex";
   document.getElementById("comment-4").style.display = "none";
-}, 18000);
+}, 36000);
 setTimeout(() => {
   document.getElementById("comment-11").style.display = "flex";
   document.getElementById("comment-5").style.display = "none";
-}, 20000);
+}, 40000);
 setTimeout(() => {
   document.getElementById("comment-12").style.display = "flex";
   document.getElementById("comment-6").style.display = "none";
-}, 22000);
+}, 44000);
 setTimeout(() => {
   document.getElementById("comment-13").style.display = "flex";
   document.getElementById("comment-7").style.display = "none";
-}, 24000);
+}, 48000);
 setTimeout(() => {
   document.getElementById("comment-14").style.display = "flex";
   document.getElementById("comment-8").style.display = "none";
-}, 26000);
+}, 52000);
   }
 };
 
