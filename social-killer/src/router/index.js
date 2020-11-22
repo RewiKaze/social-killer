@@ -4,7 +4,7 @@ import Home from "../views/Home.vue";
 import comment from "../views/Comment.vue";
 import live from "../views/livepage.vue";
 import chat from "@/views/Chat.vue";
-// import livecam from "@/views/LiveAndCam.vue"
+import livecam from "@/views/LiveAndCam.vue"
 import loading from "@/views/Loading.vue";
 import share from "@/views/sharepage.vue";
 
@@ -38,6 +38,10 @@ const routes = [
   {
     path: "/share",
     component : share
+  },
+  {
+    path: "/livecam",
+    component : livecam
   }
 ];
 
