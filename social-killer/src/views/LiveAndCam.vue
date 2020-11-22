@@ -482,9 +482,8 @@ video {
 <script>
 export default {
   name: "livecam",
-};
-
-setTimeout(() => {
+  mounted(){
+    setTimeout(() => {
   document.getElementById("comment-2").style.display = "flex";
 }, 2000);
 setTimeout(() => {
@@ -531,5 +530,9 @@ setTimeout(() => {
   document.getElementById("comment-14").style.display = "flex";
   document.getElementById("comment-8").style.display = "none";
 }, 26000);
+  }
+};
+
+
 
 </script>

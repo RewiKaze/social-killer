@@ -556,7 +556,12 @@ export default {
     },
     showAnswer3(data){
       this.text2 = data.currentTarget.innerText
+      document.getElementById('block-answer').classList.remove('fade-in');
       document.getElementById('user-answer3').innerHTML= "<div class='chat-text fade-in-bottom'>"+data.currentTarget.innerText+"</div>"
+      document.getElementById('block-answer').classList.add('fade-out');
+      setTimeout(()=>{
+        document.getElementById('block-answer').style.display = 'none';
+      },1000)
       // this.userQuestion++
       setTimeout(()=>{
         document.getElementById('list-answer2').classList.add('fade-out-top')
