@@ -37,17 +37,17 @@
               </div>
               <div class="emote">
                 <img
-                  @click="changeCommentOneToTwo()"
+                  @click="changeCommentOneToTwo(5)"
                   src="@/assets/emoji/emoji-01.png"
                   width="70vw"
                 />
                 <img
-                  @click="changeCommentOneToTwo()"
+                  @click="changeCommentOneToTwo(0)"
                   src="@/assets/emoji/emoji-02.png"
                   width="70vw"
                 />
                 <img
-                  @click="changeCommentOneToTwo()"
+                  @click="changeCommentOneToTwo(3)"
                   src="@/assets/emoji/emoji-03.png"
                   width="70vw"
                 />
@@ -107,17 +107,17 @@
           </div>
           <div class="emote">
             <img
-              @click="changeCommentTwoToThree()"
+              @click="changeCommentTwoToThree(5)"
               src="@/assets/emoji/emoji-01.png"
               width="70vw"
             />
             <img
-              @click="changeCommentTwoToThree()"
+              @click="changeCommentTwoToThree(0)"
               src="@/assets/emoji/emoji-02.png"
               width="70vw"
             />
             <img
-              @click="changeCommentTwoToThree()"
+              @click="changeCommentTwoToThree(3)"
               src="@/assets/emoji/emoji-03.png"
               width="70vw"
             />
@@ -201,17 +201,17 @@
           </div>
           <div class="emote">
             <img
-              @click="changeCommentThreeToFour()"
+              @click="changeCommentThreeToFour(5)"
               src="@/assets/emoji/emoji-01.png"
               width="70vw"
             />
             <img
-              @click="changeCommentThreeToFour()"
+              @click="changeCommentThreeToFour(0)"
               src="@/assets/emoji/emoji-02.png"
               width="70vw"
             />
             <img
-              @click="changeCommentThreeToFour()"
+              @click="changeCommentThreeToFour(3)"
               src="@/assets/emoji/emoji-03.png"
               width="70vw"
             />
@@ -315,10 +315,12 @@ export default {
   data() {
     return {
       numLike: 16,
+      scoreComment:0
     };
   },
   methods: {
-    changeCommentOneToTwo() {
+    changeCommentOneToTwo(score) {
+      this.scoreComment += score;
       document.getElementById("second-comment").classList.add("fade-in-bottom");
       document.getElementById("first-comment").classList.add("fade-out-top");
       setTimeout(() => {
@@ -326,7 +328,8 @@ export default {
         document.getElementById("second-comment").style.display = "block";
       }, 600);
     },
-    changeCommentTwoToThree() {
+    changeCommentTwoToThree(score) {
+      this.scoreComment += score;
       document
         .getElementById("second-comment")
         .classList.remove("fade-in-bottom");
@@ -337,7 +340,8 @@ export default {
         document.getElementById("third-comment").style.display = "block";
       }, 600);
     },
-    changeCommentThreeToFour() {
+    changeCommentThreeToFour(score) {
+      this.scoreComment += score;
       document
         .getElementById("third-comment")
         .classList.remove("fade-in-bottom");
@@ -349,9 +353,13 @@ export default {
       }, 600);
     },
     changeToLivePage() {
+      sessionStorage.setItem("scoreComment", this.scoreComment)
       router.push("/live");
     },
   },
+  mounted(){
+    sessionStorage.setItem("scoreComment",0);
+  }
 };
 </script>
 

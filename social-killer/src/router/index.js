@@ -8,6 +8,7 @@ import livecam from "@/views/LiveAndCam.vue"
 import loading from "@/views/Loading.vue";
 import share from "@/views/sharepage.vue";
 import conclude from "@/views/Conclude.vue"
+import warning from "@/views/Warning.vue"
 
 Vue.use(VueRouter);
 
@@ -47,6 +48,10 @@ const routes = [
   {
     path: "/conclude",
     component : conclude
+  },
+  {
+    path: "/warning",
+    component: warning
   }
 ];
 

@@ -185,22 +185,22 @@
               <div v-if="userQuestion == 1"
                 class="answer-border d-flex justify-content-around align-items-center answer-text"
               >
-                <div class="answer-button d-table p-2" id="answer1" @click="showAnswer($event)">
+                <div class="answer-button d-table p-2" id="answer1" @click="showAnswer($event,1)">
                   <span class="answer1 d-table-cell align-middle">
                      ใจเย็นๆ เขาอาจจะแค่แซวเล่น
                   </span>
                 </div>
-                <div class="answer-button d-table p-2" id="answer2" @click="showAnswer($event)">
+                <div class="answer-button d-table p-2" id="answer2" @click="showAnswer($event,3)">
                   <span class="answer2 d-table-cell align-middle">
                     แค่คอมเมนต์เอง ไม่เป็นไรนะมึง เขาทำอะไรมึงไม่ได้หรอก
                   </span>
                 </div>
-                <div class="answer-button d-table p-2" id="answer3" @click="showAnswer($event)">
+                <div class="answer-button d-table p-2" id="answer3" @click="showAnswer($event,5)">
                   <span class="answer3 d-table-cell align-middle">
                     คิดว่าเป็นสีสันชีวิต5555555
                   </span>
                 </div>
-                <div class="answer-button d-table p-2" id="answer4" @click="showAnswer($event)">
+                <div class="answer-button d-table p-2" id="answer4" @click="showAnswer($event,2)">
                   <span class="answer4 d-table-cell align-middle">
                     เพื่อนกูสวยไง ใครๆ ก็อยากชม
                   </span>
@@ -209,22 +209,22 @@
               <div v-if="userQuestion == 2"
                 class="answer-border d-flex justify-content-around align-items-center answer-text"
               >
-                <div class="answer-button d-table p-2" id="answer1" @click="showAnswer2($event)">
+                <div class="answer-button d-table p-2" id="answer1" @click="showAnswer2($event,4)">
                   <span class="answer1 d-table-cell align-middle">
                     เห้ยย พรุ่งนี้อาจจะไม่มีก็ได้ไง55555555
                   </span>
                 </div>
-                <div class="answer-button d-table p-2" id="answer2" @click="showAnswer2($event)">
+                <div class="answer-button d-table p-2" id="answer2" @click="showAnswer2($event,1)">
                   <span class="answer2 d-table-cell align-middle">
                     เรื่องปกติแหล่ะ อย่าคิดมากๆ
                   </span>
                 </div>
-                <div class="answer-button d-table p-2" id="answer3" @click="showAnswer2($event)">
+                <div class="answer-button d-table p-2" id="answer3" @click="showAnswer2($event,3)">
                   <span class="answer3 d-table-cell align-middle">
                     พูดยากอ่ะ สู้ๆ นะ
                   </span>
                 </div>
-                <div class="answer-button d-table p-2" id="answer4" @click="showAnswer2($event)">
+                <div class="answer-button d-table p-2" id="answer4" @click="showAnswer2($event,5)">
                   <span class="answer4 d-table-cell align-middle">
                     ทำใจว่ะ ส่วนใหญ่กูก็เห็นคนที่ไลฟ์โดนกันหมด
                   </span>
@@ -233,22 +233,22 @@
               <div v-if="userQuestion == 3"
                 class="answer-border d-flex justify-content-around align-items-center answer-text"
               >
-                <div class="answer-button d-table p-2" id="answer1" @click="showAnswer3($event)">
+                <div class="answer-button d-table p-2" id="answer1" @click="showAnswer3($event,1)">
                   <span class="answer1 d-table-cell align-middle">
                     กูไม่ได้หมายความแบบนั้น แค่อยากให้มึงเข้าใจ
                   </span>
                 </div>
-                <div class="answer-button d-table p-2" id="answer2" @click="showAnswer3($event)">
+                <div class="answer-button d-table p-2" id="answer2" @click="showAnswer3($event,5)">
                   <span class="answer2 d-table-cell align-middle">
                     มึงต้องลองปล่อยวางบ้าง
                   </span>
                 </div>
-                <div class="answer-button d-table p-2" id="answer3" @click="showAnswer3($event)">
+                <div class="answer-button d-table p-2" id="answer3" @click="showAnswer3($event,4)">
                   <span class="answer3 d-table-cell align-middle">
                     ใจเย็นๆ มึงพาลแล้วเนี่ย
                   </span>
                 </div>
-                <div class="answer-button d-table p-2" id="answer4" @click="showAnswer3($event)">
+                <div class="answer-button d-table p-2" id="answer4" @click="showAnswer3($event,2)">
                   <span class="answer4 d-table-cell align-middle">
                     มันไม่มีอะไรหรอก ไม่ต้องคิดมากหรอก
                   </span>
@@ -500,11 +500,13 @@ export default {
       wait3: false,
       show: true,
       text: "",
-      text2: ""
+      text2: "",
+      scoreChat:0
     };
   },
   methods:{
-    showAnswer(data){
+    showAnswer(data ,score){
+      this.scoreChat += score;
       document.getElementById('user-answer').innerHTML= "<div class='chat-text fade-in-bottom'>"+data.currentTarget.innerText+"</div>";
       document.getElementById('block-answer').classList.add('fade-out');
       setTimeout(()=>{
@@ -523,7 +525,8 @@ export default {
         document.getElementById('block-answer').classList.add('fade-in');
       },7000)
     },
-    showAnswer2(data){
+    showAnswer2(data,score){
+      this.scoreChat += score;
       this.wait1 = true
       this.text = data.currentTarget.innerText
       document.getElementById('block-answer').classList.remove('fade-in');
@@ -554,7 +557,8 @@ export default {
         console.log(this.userQuestion)
       },7500)
     },
-    showAnswer3(data){
+    showAnswer3(data,score){
+      this.scoreChat += score;
       this.text2 = data.currentTarget.innerText
       document.getElementById('block-answer').classList.remove('fade-in');
       document.getElementById('user-answer3').innerHTML= "<div class='chat-text fade-in-bottom'>"+data.currentTarget.innerText+"</div>"
@@ -571,9 +575,13 @@ export default {
         this.userQuestion++
       },5000)
       setTimeout(()=>{
+        sessionStorage.setItem('scoreChat',this.scoreChat)
         router.push("/livecam")
       },9000)
     }
+  },
+  mounted(){
+    sessionStorage.setItem('scoreChat',0)
   }
 }
 </script>

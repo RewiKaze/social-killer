@@ -76,19 +76,19 @@
             <!-- Emoji -->
             <b-col id="emoji-1" cols="4" class="live-emoji">
               <img
-                @click="addNextComment('emo-1')"
+                @click="addNextComment('emo-1',5)"
                 id="emo-1"
                 class="emo-hide-1"
                 src="@/assets/emoji/emoji-01.png"
               />
               <img
-                @click="addNextComment('emo-2')"
+                @click="addNextComment('emo-2',0)"
                 id="emo-2"
                 class="emo-hide-1"
                 src="@/assets/emoji/emoji-02.png"
               />
               <img
-                @click="addNextComment('emo-3')"
+                @click="addNextComment('emo-3',3)"
                 id="emo-3"
                 class="emo-hide-1"
                 src="@/assets/emoji/emoji-03.png"
@@ -121,19 +121,19 @@
             <!-- Emoji -->
             <b-col id="emoji-2" cols="4" class="live-emoji">
               <img
-                @click="addNextComment('emo-4')"
+                @click="addNextComment('emo-4',5)"
                 id="emo-4"
                 class="emo-hide-2"
                 src="@/assets/emoji/emoji-01.png"
               />
               <img
-                @click="addNextComment('emo-5')"
+                @click="addNextComment('emo-5',0)"
                 id="emo-5"
                 class="emo-hide-2"
                 src="@/assets/emoji/emoji-02.png"
               />
               <img
-                @click="addNextComment('emo-6')"
+                @click="addNextComment('emo-6',3)"
                 id="emo-6"
                 class="emo-hide-2"
                 src="@/assets/emoji/emoji-03.png"
@@ -165,19 +165,19 @@
             <!-- Emoji -->
             <b-col id="emoji-3" cols="4" class="live-emoji">
               <img
-                @click="addNextComment('emo-7')"
+                @click="addNextComment('emo-7',5)"
                 id="emo-7"
                 class="emo-hide-3"
                 src="@/assets/emoji/emoji-01.png"
               />
               <img
-                @click="addNextComment('emo-8')"
+                @click="addNextComment('emo-8',0)"
                 id="emo-8"
                 class="emo-hide-3"
                 src="@/assets/emoji/emoji-02.png"
               />
               <img
-                @click="addNextComment('emo-9')"
+                @click="addNextComment('emo-9',3)"
                 id="emo-9"
                 class="emo-hide-3"
                 src="@/assets/emoji/emoji-03.png"
@@ -209,19 +209,19 @@
             <!-- Emoji -->
             <b-col id="emoji-4" cols="4" class="live-emoji">
               <img
-                @click="addNextComment('emo-10')"
+                @click="addNextComment('emo-10',5)"
                 id="emo-10"
                 class="emo-hide-4"
                 src="@/assets/emoji/emoji-01.png"
               />
               <img
-                @click="addNextComment('emo-11')"
+                @click="addNextComment('emo-11',0)"
                 id="emo-11"
                 class="emo-hide-4"
                 src="@/assets/emoji/emoji-02.png"
               />
               <img
-                @click="addNextComment('emo-12')"
+                @click="addNextComment('emo-12',3)"
                 id="emo-12"
                 class="emo-hide-4"
                 src="@/assets/emoji/emoji-03.png"
@@ -254,19 +254,19 @@
             <!-- Emoji -->
             <b-col id="emoji-5" cols="4" class="live-emoji">
               <img
-                @click="addNextComment('emo-13')"
+                @click="addNextComment('emo-13',5)"
                 id="emo-13"
                 class="emo-hide-5"
                 src="@/assets/emoji/emoji-01.png"
               />
               <img
-                @click="addNextComment('emo-14')"
+                @click="addNextComment('emo-14',0)"
                 id="emo-14"
                 class="emo-hide-5"
                 src="@/assets/emoji/emoji-02.png"
               />
               <img
-                @click="addNextComment('emo-15')"
+                @click="addNextComment('emo-15',3)"
                 id="emo-15"
                 class="emo-hide-5"
                 src="@/assets/emoji/emoji-03.png"
@@ -298,19 +298,19 @@
             <!-- Emoji -->
             <b-col id="emoji-6" cols="4" class="live-emoji">
               <img
-                @click="changeToChatPage('emo-16')"
+                @click="changeToChatPage('emo-16',5)"
                 id="emo-16"
                 class="emo-hide-6"
                 src="@/assets/emoji/emoji-01.png"
               />
               <img
-                @click="changeToChatPage('emo-17')"
+                @click="changeToChatPage('emo-17',0)"
                 id="emo-17"
                 class="emo-hide-6"
                 src="@/assets/emoji/emoji-02.png"
               />
               <img
-                @click="changeToChatPage('emo-18')"
+                @click="changeToChatPage('emo-18',3)"
                 id="emo-18"
                 class="emo-hide-6"
                 src="@/assets/emoji/emoji-03.png"
@@ -331,13 +331,15 @@ export default {
   data() {
     return {
       num: 2,
+      scoreLivePage:0
     };
   },
   methods: {
-    addNextComment(id) {
+    addNextComment(id, score) {
       if (document.getElementById(id).classList.contains("clicked")) {
         console.log("Clicked");
       } else {
+        this.scoreLivePage += score;
         document
           .getElementById("comment-" + this.num)
           .classList.add("comment-fade-in");
@@ -366,10 +368,11 @@ export default {
         return false;
       }
     },
-    changeToChatPage(id) {
+    changeToChatPage(id,score) {
       if (document.getElementById(id).classList.contains("clicked")) {
         console.log("Clicked");
       } else {
+        this.scoreLivePage += score;
         document.getElementById(id).classList.add("clicked");
         // ยังไม่เปลี่ยนหน้า
         // Show only clicked emoji
@@ -388,6 +391,7 @@ export default {
           }, 300);
           // change to chat
           setTimeout(() => {
+            sessionStorage.setItem('livePageScore',this.scoreLivePage);
             router.push("/chat");
           }, 2000);
         }
@@ -396,6 +400,7 @@ export default {
     },
   },
   mounted() {
+    sessionStorage.setItem('livePageScore',0)
     let recaptchaScript = document.createElement("script");
     recaptchaScript.setAttribute("src", "https://tenor.com/embed.js");
     document.head.appendChild(recaptchaScript);
