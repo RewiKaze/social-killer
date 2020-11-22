@@ -53,7 +53,7 @@
             </li>
             <!-- Add Comment 3 -->
             <div v-if="userQuestion == 2">
-              <br><br><br><br><br>
+              <br><br><br>
             </div>
             <li
               class="d-flex justify-content-left mb-4 text-left align-items-left"
@@ -106,7 +106,7 @@
               <!-- End Comment 4-->
               <!-- Start Comment 5 -->
             <div v-if="userQuestion == 3">
-                <br><br><br><br><br>
+                <br><br><br>
             </div>
             <li
               class="d-flex justify-content-left mb-4 text-left align-items-left"
@@ -160,7 +160,7 @@
               <!-- End Comment 6 -->
               <!-- Final Comment -->
               <div v-if="userQuestion == 4">
-                <br><br><br><br><br>
+                <br><br><br>
              </div>
               <li
               class="d-flex justify-content-left mb-4 text-left align-items-left"
