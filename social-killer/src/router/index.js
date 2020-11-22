@@ -7,6 +7,7 @@ import chat from "@/views/Chat.vue";
 import livecam from "@/views/LiveAndCam.vue"
 import loading from "@/views/Loading.vue";
 import share from "@/views/sharepage.vue";
+import conclude from "@/views/Conclude.vue"
 
 Vue.use(VueRouter);
 
@@ -42,6 +43,10 @@ const routes = [
   {
     path: "/livecam",
     component : livecam
+  },
+  {
+    path: "/conclude",
+    component : conclude
   }
 ];
 

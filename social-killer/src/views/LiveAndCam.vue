@@ -480,9 +480,23 @@ video {
 </style>
 
 <script>
+import router from "@/router";
 export default {
   name: "livecam",
   mounted(){
+    const video = document.getElementById("videoElement");
+
+
+if (navigator.mediaDevices.getUserMedia) {
+  navigator.mediaDevices
+    .getUserMedia({ video: true })
+    .then((stream) => {
+      video.srcObject = stream;
+    })
+    .catch((err0r) => {
+      console.log(err0r + "Something went wrong!");
+    });
+}
     setTimeout(() => {
   document.getElementById("comment-2").style.display = "flex";
 }, 4000);
@@ -530,6 +544,9 @@ setTimeout(() => {
   document.getElementById("comment-14").style.display = "flex";
   document.getElementById("comment-8").style.display = "none";
 }, 52000);
+setTimeout(() => {
+  router.push("/conclude")
+}, 55000);
   }
 };
 
