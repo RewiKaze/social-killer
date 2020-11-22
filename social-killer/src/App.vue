@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <vue-page-transition style="height:100vh;" name="fade">
-      <router-view />
+      <router-view/>
     </vue-page-transition>
   </div>
 </template>
