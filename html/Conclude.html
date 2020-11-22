@@ -17,23 +17,31 @@
 
 <body>
     <div class="container-fluid h-100">
-        
+
         <div class="conclude-content-box">
             <div class="row">
                 <div class="col-12">
                     <div class="HeadSocial">SOCIAL</div>
                     <div class="HeadSocial">KILLER</div>
                     <div class="HeadLevel">ระดับความ Sexual Harrasment บนโซเชียลของคุณ</div>
+                    <div class="pie-chart" data-percentage="70"><!-- ใส่local stateตรงนี้จ้า เต็ม100 -->
+                        <svg viewBox="-100 -100 200 200">
+                            <path d="" />
+                        </svg>
+                    </div>
+                    <div class="Level-con">ระดับ...</div>
                 </div>
             </div>
         </div>
-        <!-- <div id="chartContainer" style="height: 370px; width: 100%;"></div> -->
+
 
 
         <div class="conclude-content-box2">
             <div class="row">
                 <div class="col-12">
-                    <div class="HeadTitle" id="head"><span class="headT"><b>Sexual Harrasment</b><p class="what"> คือ</p></span></div>
+                    <div class="HeadTitle" id="head"><span class="headT"><b>Sexual Harrasment</b>
+                            <p class="what"> คือ</p>
+                        </span></div>
                 </div>
             </div>
             <div class="row">
@@ -93,9 +101,11 @@
                 <div class="col-12">
                     <div class="mean" style="
             font-family: 'chura'; opacity: '0%';" id="result-six">
-                        <div class="arrow"><svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
-                          </svg></div>
+                        <div class="arrow"><svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-arrow-right"
+                                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                            </svg></div>
                     </div>
                 </div>
             </div>
@@ -106,13 +116,13 @@
     /* @import url('https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,400;1,700&display=swap'); */
 
     body {
-        background-color :rgb(0, 0, 0);
+        background-color: rgb(0, 0, 0);
         background-repeat: no-repeat;
         height: 100vh;
         width: 100vw;
         color: #ffffff;
-        
-        
+
+
     }
 
     .conclude-content-box {
@@ -121,17 +131,18 @@
         width: 50%;
         height: 70%;
     }
+
     .conclude-content-box2 {
         height: fit-content;
-border-radius: 35px;
-position: absolute;
-border: 0.5px solid white;
-width: 50%;
-right: 25px;
-top: 16%;
-right: 5%;
-padding: 2%;
-}
+        border-radius: 35px;
+        position: absolute;
+        border: 0.5px solid white;
+        width: 50%;
+        right: 25px;
+        top: 16%;
+        right: 5%;
+        padding: 2%;
+    }
 
     .row {
         width: 100%;
@@ -143,6 +154,7 @@ padding: 2%;
         font-size: 37pt;
 
     }
+
     .mean {
         font-size: 130%;
         opacity: 0%;
@@ -154,40 +166,55 @@ padding: 2%;
         font-size: 60%;
         font-weight: 400;
     }
+
     .HeadSocial {
         font-family: "Chivo", sans-serif;
-        left : 0;
-        top : 0;
+        left: 0;
+        top: 0;
         font-weight: bold;
         font-size: 100pt;
         height: 80pt;
         padding-left: 2%;
-        
+
     }
-    .next{
-        padding-left:90%;
+
+    .next {
+        padding-left: 90%;
         font-size: 130%;
         opacity: 0%;
     }
-    .what{
+
+    .what {
         font-family: "chura", sans-serif;
         display: inline;
     }
 
     @supports (-webkit-text-stroke: 1px rgb(255, 255, 255)) {
-  .HeadSocial {
-    -webkit-text-stroke: 1px rgb(255, 255, 255);
-    -webkit-text-fill-color: transparent;
-  }
-}
-.HeadLevel {
+        .HeadSocial {
+            -webkit-text-stroke: 1px rgb(255, 255, 255);
+            -webkit-text-fill-color: transparent;
+        }
+    }
+
+    .HeadLevel {
         font-family: "chura", sans-serif;
-        left : 0;
-        top : 0;
+        left: 0;
+        top: 0;
         font-size: 20pt;
         padding: 10%;
-        
+
     }
+    .Level-con {
+        font-family: "chura", sans-serif;
+        left: 0;
+        top: 0;
+        font-size: 20pt;
+        font-weight: italic;
+        padding-top: 3%;
+        padding-left: 35%;
+
+    }
+
     .hlRed {
         color: red;
     }
@@ -197,120 +224,209 @@ padding: 2%;
         src: url("ChulaCharasNewReg.ttf") format("truetype");
     }
 
-    .fade-in{
-animation: fadeIn ease 5s;
-/* -webkit-animation: fadeIn ease 20s;
+    .fade-in {
+        animation: fadeIn ease 5s;
+        /* -webkit-animation: fadeIn ease 20s;
 -moz-animation: fadeIn ease 20s;
 -o-animation: fadeIn ease 20s;
 -ms-animation: fadeIn ease 20s; */
-}
-@keyframes fadeIn {
-0% {opacity:0;}
-100% {opacity:1;}
-}
+    }
 
-@-moz-keyframes fadeIn {
-0% {opacity:0;}
-100% {opacity:1;}
-}
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
 
-@-webkit-keyframes fadeIn {
-0% {opacity:0;}
-100% {opacity:1;}
-}
+        100% {
+            opacity: 1;
+        }
+    }
 
-@-o-keyframes fadeIn {
-0% {opacity:0;}
-100% {opacity:1;}
-}
+    @-moz-keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
 
-@-ms-keyframes fadeIn {
-0% {opacity:0;}
-100% {opacity:1;}
-}
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @-webkit-keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @-o-keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @-ms-keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
 
 
-.arrow {
-  width: 100vh;
-  -webkit-animation: 3s soft-blink infinite alternate;
-  animation: 3s soft-blink infinite alternate;
-  position: absolute;
-  opacity: 0;
-  padding-left: 82%;
-  margin-top: -20%;
-}
+    .arrow {
+        width: 100vh;
+        -webkit-animation: 3s soft-blink infinite alternate;
+        animation: 3s soft-blink infinite alternate;
+        position: absolute;
+        opacity: 0;
+        padding-left: 79%;
+        margin-top: -5%;
+    }
 
-@-webkit-keyframes soft-blink {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0.8;
-  }
-}
+    @-webkit-keyframes soft-blink {
+        0% {
+            opacity: 0;
+        }
 
-@keyframes soft-blink {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0.8;
-  }
-}
+        50% {
+            opacity: 0;
+        }
 
-.arrow:after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 20px;
-  height: 20px;
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
+        100% {
+            opacity: 0.8;
+        }
+    }
 
+    @keyframes soft-blink {
+        0% {
+            opacity: 0;
+        }
+
+        50% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 0.8;
+        }
+    }
+
+    .arrow:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+
+    .pie-chart {
+        display: block;
+        max-width: 300px;
+        max-height: 300px;
+        width: 100%;
+        padding: 0;
+        margin-left: 21%;
+        margin-top: -6%;
+        transform-origin: 50% 50%;
+        -moz-transform-origin: 40px 40px;
+        -ms-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+    }
+
+    .pie-chart~h3 {
+        text-align: center;
+        font-family: "Helvetica", sans-serif;
+        font-size: 24px;
+        font-weight: normal;
+        color: gray;
+    }
+
+    .pie-chart svg {
+        max-height: 300px;
+        border-radius: 50%;
+        border: 1px solid #eee;
+        background: #000000;
+    }
+
+    .pie-chart svg path {
+        fill: #ffffff;
+        -moz-transform: translate3d(0, 0, -1px);
+    }
 </style>
 <script>
-  window.onload = function(){
-      document.getElementById("head").classList.add("fade-in")
-      setTimeout(function(){
-          document.getElementById("result-first").style.opacity='100%';
-          document.getElementById("result-first").classList.add("fade-in")
-          console.log("check")
-      },5000)
-      setTimeout(function(){
-          document.getElementById("result-second").style.opacity='100%';
-          document.getElementById("result-second").classList.add("fade-in")
-          console.log("check")
-      },15000)
-      setTimeout(function(){
-          document.getElementById("result-third").style.opacity='100%';
-          document.getElementById("result-third").classList.add("fade-in")
-          console.log("check")
-      },23000)
-      setTimeout(function(){
-          document.getElementById("result-four").style.opacity='100%';
-          document.getElementById("result-four").classList.add("fade-in")
-          console.log("check")
-      },26000)
-      setTimeout(function(){
-          document.getElementById("result-five").style.opacity='100%';
-          document.getElementById("result-five").classList.add("fade-in")
-          console.log("check")
-      },30000)
-      setTimeout(function(){
-          document.getElementById("result-six").style.opacity='100%';
-          document.getElementById("result-six").classList.add("fade-in")
-          console.log("check")
-      },30000)
+    window.onload = function () {
+        document.getElementById("head").classList.add("fade-in")
+        setTimeout(function () {
+            document.getElementById("result-first").style.opacity = '100%';
+            document.getElementById("result-first").classList.add("fade-in")
+            console.log("check")
+        }, 5000)
+        setTimeout(function () {
+            document.getElementById("result-second").style.opacity = '100%';
+            document.getElementById("result-second").classList.add("fade-in")
+            console.log("check")
+        }, 15000)
+        setTimeout(function () {
+            document.getElementById("result-third").style.opacity = '100%';
+            document.getElementById("result-third").classList.add("fade-in")
+            console.log("check")
+        }, 23000)
+        setTimeout(function () {
+            document.getElementById("result-four").style.opacity = '100%';
+            document.getElementById("result-four").classList.add("fade-in")
+            console.log("check")
+        }, 26000)
+        setTimeout(function () {
+            document.getElementById("result-five").style.opacity = '100%';
+            document.getElementById("result-five").classList.add("fade-in")
+            console.log("check")
+        }, 30000)
+        setTimeout(function () {
+            document.getElementById("result-six").style.opacity = '100%';
+            document.getElementById("result-six").classList.add("fade-in")
+            console.log("check")
+        }, 30000)
 
-  }  
+
+        draw_pie_chart();
+        window.onresize = draw_pie_chart();
+
+        function draw_pie_chart() {
+            var percentage, // percentage for the data attribute
+                path, // path for svg
+                angle, // 1% = 3.6deg; used for coord mapping
+                radius = 50, // radius of the pie chart in pixels
+                coords = []; // holds Cartesian plane coords for svg path
+
+            percentage = parseInt(document.querySelectorAll('.pie-chart[data-percentage]')[0].getAttribute('data-percentage'));
+
+            angle = percentage * 3.6; // 1% ~ 3.6deg
+            radius = radius * 2;      // get diameter
+
+            coords[0] = radius * Math.cos(Math.PI * angle / 180);
+            coords[1] = radius * Math.sin(Math.PI * angle / 180);
+
+            path = 'M0,0 L' + radius + ',0 A' + radius + ',' + radius + ' 0 1,1 ' + coords[0] + ',' + coords[1] + ' Z';
+
+            document.querySelectorAll('.pie-chart svg path')[0].setAttribute('d', path);
+
+            document.querySelectorAll('h3')[0].innerHTML = percentage + '%';
+
+        }
+    }
 // window.onload = function() {
 
 // var chart = new CanvasJS.Chart("chartContainer", {
@@ -331,5 +447,6 @@ animation: fadeIn ease 5s;
 // chart.render();
 
 // }
-    </script>
+</script>
+
 </html>
