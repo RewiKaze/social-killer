@@ -24,17 +24,16 @@
                 <div class="option">...</div>
               </div>
               <div class="comment">
-                <div class="comment-text" style="margin-left:7.5%">
+                <div class="comment-text" style="margin-left:10%">
                   หนุ่ม ๆ ดูมันดิ “ขอบีบนมสาว” กลางสยาม ฮาลั่น!!
                 </div>
-                <img
-                  src="@/assets/comment/first-comment/web-3.png"
-                  width="85%"
-                  height="50%"
-                  style="display: block;
-                      margin-left: auto;
-                      margin-right: auto;"
-                />
+                <div class="d-flex justify-content-center">
+                  <img
+                    src="@/assets/comment/first-comment/web-3.png"
+                    width="80%"
+                    height="50%"
+                  />
+                </div>
               </div>
               <div class="emote">
                 <img
@@ -58,20 +57,17 @@
             </b-col>
           </b-row>
         </div>
-        <div class="side-comment">
-          <br /><br />
+        <div class="d-flex flex-column justify-content-around align-items-center side-comment">
           <img
             class="side-img"
             src="@/assets/comment/first-comment/01.png"
             width="60%"
           />
-          <br /><br />
           <img
             class="side-img"
             src="@/assets/comment/first-comment/02.png"
             width="60%"
           />
-          <br /><br />
           <img
             class="side-img"
             src="@/assets/comment/first-comment/03.png"
@@ -129,20 +125,17 @@
             <label class="text-emote">โปรดแสดงความรู้สึกต่อโพสต์นี้</label>
           </div>
         </div>
-        <div class="side-comment">
-          <br /><br />
+        <div class="d-flex flex-column justify-content-around align-items-center side-comment">
           <img
             class="side-img"
             src="@/assets/comment/second-comment/01.png"
             width="60%"
           />
-          <br /><br />
           <img
             class="side-img"
             src="@/assets/comment/second-comment/02.png"
             width="60%"
           />
-          <br /><br />
           <img
             class="side-img"
             src="@/assets/comment/second-comment/03.png"
@@ -226,20 +219,17 @@
             <label class="text-emote">โปรดแสดงความรู้สึกต่อโพสต์นี้</label>
           </div>
         </div>
-        <div class="side-comment">
-          <br /><br />
+        <div class="d-flex flex-column justify-content-around align-items-center side-comment">
           <img
             class="side-img"
             src="@/assets/comment/second-comment/01.png"
             width="60%"
           />
-          <br /><br />
           <img
             class="side-img"
             src="@/assets/comment/second-comment/02.png"
             width="60%"
           />
-          <br /><br />
           <img
             class="side-img"
             src="@/assets/comment/second-comment/03.png"
@@ -296,20 +286,17 @@
             <label class="text-emote">โปรดแสดงความรู้สึกต่อโพสต์นี้</label>
           </div> -->
         </div>
-        <div class="side-comment">
-          <br /><br />
+        <div class="d-flex flex-column justify-content-around align-items-center side-comment">
           <img
             class="side-img"
             src="@/assets/comment/second-comment/01.png"
             width="60%"
           />
-          <br /><br />
           <img
             class="side-img"
             src="@/assets/comment/second-comment/02.png"
             width="60%"
           />
-          <br /><br />
           <img
             class="side-img"
             src="@/assets/comment/second-comment/03.png"
@@ -422,11 +409,13 @@ export default {
   display: flex;
 }
 .second-comment {
+  flex: 1 1 auto;
   width: 100%;
   height: 75%;
   position: relative;
 }
 .forth-comment {
+  flex: 1 1 auto;
   width: 100%;
   height: 75%;
   position: relative;
@@ -452,11 +441,10 @@ export default {
   text-align: center;
 }
 .side-img {
-  margin: auto;
-  display: block;
   border: solid white 0.5px;
 }
 .first-comment {
+  flex: 1 1 auto;
   width: 100%;
   height: 75%;
   position: relative;
@@ -538,6 +526,8 @@ export default {
   overflow: hidden;
 }
 .comment-outside-border {
+  display: flex;
+  flex-flow: column;
   border: white solid 0.5px;
   width: 75%;
   height: 85%;
@@ -569,6 +559,7 @@ hr {
 
 /* Third Comment */
 .third-comment {
+  flex: 1 1 auto;
   width: 100%;
   height: 75%;
   position: relative;
