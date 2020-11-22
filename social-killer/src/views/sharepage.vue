@@ -126,7 +126,7 @@ img.share-paper {
 }
 
 .dl-btn-field {
-  width: 30vw;
+  width: 20vw;
   height: 40%;
 }
 </style>
