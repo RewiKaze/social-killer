@@ -628,32 +628,25 @@ export default {
   margin-right: auto;
   text-align: center;
 }
-/* Arrow */
-.arrowCM {
-  /* width: 100vh; */
-  -webkit-animation: 3s soft-blink infinite alternate;
-  animation: 3s soft-blink infinite alternate;
-  position: absolute;
-  opacity: 0;
-  padding-left: 88%;
-  margin-top: -2%;
-}
 
-.arrowCM:after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 20px;
-  height: 20px;
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
+
 
 .text-E {
   padding: 0;
   font-family: "ChulaCharas";
   font-size: 1vmax;
   width: 100%;
+  -webkit-animation: 3s soft-blink infinite alternate;
+  animation: 3s soft-blink infinite alternate;
+}
+.text-E:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  /* width: 20px;
+  height: 20px; */
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 </style>
