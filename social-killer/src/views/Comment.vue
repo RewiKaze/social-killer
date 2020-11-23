@@ -480,7 +480,7 @@ export default {
 }
 .img-profile {
   position: relative;
-  top: 50%;
+  top: 55%;
   transform: translate(0, -55%);
 }
 
