@@ -636,8 +636,8 @@ export default {
   font-family: "ChulaCharas";
   font-size: 1vmax;
   width: 100%;
-  -webkit-animation: 3s soft-blink infinite alternate;
-  animation: 3s soft-blink infinite alternate;
+  -webkit-animation: 1s soft-blink infinite alternate;
+  animation: 1s soft-blink infinite alternate;
 }
 .text-E:after {
   content: "";
