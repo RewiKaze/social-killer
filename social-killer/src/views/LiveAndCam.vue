@@ -156,8 +156,8 @@
                 <div class="p-2 font-weight-bold comment-name">
                   Saksit Kobkhun
                 </div>
-                <div class="px-2 comment-txt">น่ารักจัง ก้มหน่อยค้าบบบ</div>
-                <div class="px-2 comment-txt">ดูแต่แม่ค้าค้าบ</div>
+                <div class="px-2 comment-txt">ก้มหน่อยค้าบบบ</div>
+                <div class="px-2 comment-txt">อยากเห็นนม เอ้ย สินค้าค้าบ</div>
               </div>
             </b-col>
           </b-row>
@@ -272,8 +272,8 @@
             <b-col cols="9">
               <div class="d-flex flex-column">
                 <div class="p-2 font-weight-bold comment-name">Warawit Rich</div>
-                <div class="px-2 comment-txt">เห็นงานเป็นลม อยากเห็นนมจังเลยค้าบ</div>
-                <div class="px-2 comment-txt">วันนี้มีใครอยู่ห้องไหมครับ</div>
+                <div class="px-2 comment-txt">เห็นงานเป็นลม</div>
+                <div class="px-2 comment-txt"> อยากเห็นนมจังเลยค้าบ!!!!</div>
               </div>
             </b-col>
           </b-row>
@@ -342,8 +342,8 @@
                 <div class="p-2 font-weight-bold comment-name">
                   Somsak Kumkom
                 </div>
-                <div class="px-2 comment-txt">มองไม่เห็น แอ่นโว้ยยย</div>
-                <div class="px-2 comment-txt">แอ่นอีก กูบอกให้แอ่น มึงจะขายไหม</div>
+                <div class="px-2 comment-txt">มองไม่เห็น แอ่นอีกโว้ยยย</div>
+                <div class="px-2 comment-txt">กูบอกให้แอ่น มึงจะขายไหม</div>
               </div>
             </b-col>
           </b-row>
@@ -367,7 +367,7 @@
                   Somsak Kumkom
                 </div>
                 <div class="px-2 comment-txt">กลัวอะไรค้าบบบ</div>
-                <div class="px-2 comment-txt">อยากขายเองไม่ใช่หรอ ทำหน้าที่แม่ค้าหน่อย</div>
+                <div class="px-2 comment-txt">ทำหน้าที่แม่ค้าหน่อย</div>
               </div>
             </b-col>
           </b-row>
