@@ -14,7 +14,7 @@
               id="share-header-1"
               style="font-size: 7vmin; color: #da0000;"
             >
-              คุณอาจะเป็นฆาตรกรโดยไม่รู้ตัว
+              คุณอาจจะเป็นฆาตรกรโดยไม่รู้ตัว
             </div>
             <div
               id="share-header-2"
