@@ -13,7 +13,7 @@
               id="friend-chat"
             >
               <img
-                src="@/assets/profile/profile8-01.png"
+                src="https://mdbootstrap.com/img/Photos/Avatars/avatar-6.jpg"
                 alt="avatar"
                 class="avatar rounded-circle ml-0 z-depth-1 pic-pro"
                 v-if="userQuestion == 1"
@@ -45,7 +45,7 @@
                 </div>
               </div>
               <img
-                src="@/assets/profile/profile7-01.png"
+                src="https://mdbootstrap.com/img/Photos/Avatars/avatar-5.jpg"
                 alt="avatar"
                 class="avatar rounded-circle z-depth-1 pic-pro"
                 v-if="userQuestion == 1 || userQuestion == 2"
@@ -60,7 +60,7 @@
               id="friend-chat2"
             >
               <img
-                src="@/assets/profile/profile8-01.png"
+                src="https://mdbootstrap.com/img/Photos/Avatars/avatar-6.jpg"
                 alt="avatar"
                 class="avatar rounded-circle ml-0 z-depth-1 pic-pro fade-in-bottom"
                 v-if="(userQuestion == 2 ||userQuestion == 3) && show == true"
@@ -97,7 +97,7 @@
                 </div>
               </div>
               <img
-                src="@/assets/profile/profile7-01.png"
+                src="https://mdbootstrap.com/img/Photos/Avatars/avatar-5.jpg"
                 alt="avatar"
                 class="avatar rounded-circle z-depth-1 pic-pro fade-in-bottom"
                 v-if="(userQuestion == 2 || userQuestion == 3) && wait == true"
@@ -112,7 +112,7 @@
               class="d-flex justify-content-left mb-4 text-left align-items-left"
             >
               <img
-                src="@/assets/profile/profile8-01.png"
+                src="https://mdbootstrap.com/img/Photos/Avatars/avatar-6.jpg"
                 alt="avatar"
                 class="avatar rounded-circle ml-0 z-depth-1 pic-pro fade-in-bottom"
                 v-if="userQuestion == 3 || userQuestion == 4"
@@ -151,7 +151,7 @@
                 </div>
               </div>
               <img
-                src="@/assets/profile/profile7-01.png"
+                src="https://mdbootstrap.com/img/Photos/Avatars/avatar-5.jpg"
                 alt="avatar"
                 class="avatar rounded-circle z-depth-1 pic-pro fade-in-bottom"
                 v-if="(userQuestion == 3 || userQuestion == 4) && wait2 == true"
@@ -166,7 +166,7 @@
               class="d-flex justify-content-left mb-4 text-left align-items-left"
             >
               <img
-                src="@/assets/profile/profile8-01.png"
+                src="https://mdbootstrap.com/img/Photos/Avatars/avatar-6.jpg"
                 alt="avatar"
                 class="avatar rounded-circle ml-0 z-depth-1 pic-pro fade-in-bottom"
                 v-if="userQuestion == 4"
@@ -175,7 +175,7 @@
                 <div class="header">
                   <strong class="primary-font">Kitty</strong>
                 </div>
-                <p class="mb-0 chat-text" id="friend-chat2" style="font-weight:bold">
+                <p class="mb-0 chat-text" id="friend-chat2">
                   มึงลองโดนเองดูบ้างไหมล่ะ
                 </p>
               </div>
@@ -457,7 +457,7 @@ hr {
 	animation: fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 .fade-out {
-	animation: fade-out 0.5s ease-out both;
+	animation: fade-out 1s ease-out both;
 }
 .fade-in {
 	animation: fade-out 1s ease-out both reverse;
@@ -487,12 +487,8 @@ hr {
 
 </style>
 <script>
-
 import router from "@/router"
 // Fade-out and fade in 1s
-var waitchat = new Audio(require('@/assets/music/waiting-chat.mp3'))
-var popchat = new Audio(require('@/assets/music/pop-chat.mp3'))
-var FaiSound = new Audio(require('@/assets/music/FaiSound.mp3'))
 export default {
   name:"chat",
   data() {
@@ -510,30 +506,26 @@ export default {
   },
   methods:{
     showAnswer(data ,score){
-      popchat.play()
       this.scoreChat += score;
       document.getElementById('user-answer').innerHTML= "<div class='chat-text fade-in-bottom'>"+data.currentTarget.innerText+"</div>";
       document.getElementById('block-answer').classList.add('fade-out');
       setTimeout(()=>{
         document.getElementById('block-answer').style.display = 'none';
-      },500)
+      },1000)
       setTimeout(()=>{
         document.getElementById('friend-chat').classList.add('fade-out-top')
-      },4500)
+      },3000)
       setTimeout(()=>{
-        popchat.play()
         this.userQuestion++;
       },5000)
       setTimeout(()=>{
         this.wait = true
-        waitchat.play()
         document.getElementById('block-answer').style.display = 'list-item';
         document.getElementById('block-answer').classList.remove('fade-out');
         document.getElementById('block-answer').classList.add('fade-in');
       },7000)
     },
     showAnswer2(data,score){
-      popchat.play()
       this.scoreChat += score;
       this.wait1 = true
       this.text = data.currentTarget.innerText
@@ -542,25 +534,23 @@ export default {
       document.getElementById('block-answer').classList.add('fade-out');
       setTimeout(()=>{
         document.getElementById('block-answer').style.display = 'none';
-      },500)
+      },1000)
       setTimeout(()=>{
         document.getElementById('list-answer1').classList.add('fade-out-top')
-      },3500)
+      },3000)
       // setTimeout(()=>{
       //   document.getElementById('friend-chat2').classList.add('fade-out-top')
       // },4500)
       setTimeout(()=>{
-        popchat.play()
         this.userQuestion++;
         // document.getElementById('user-answer2').innerHTML= "<div class='chat-text fade-in-bottom'>"+data.currentTarget.innerText+"</div>";
       },4000)
       setTimeout(()=>{
         document.getElementById('friend-chat2').classList.add('fade-out-top')
-      },7000)
+      },6000)
       setTimeout(()=>{
         this.wait2 = true
         this.show = false
-        waitchat.play()
         document.getElementById('block-answer').style.display = 'list-item';
         document.getElementById('block-answer').classList.remove('fade-out');
         document.getElementById('block-answer').classList.add('fade-in');
@@ -568,7 +558,6 @@ export default {
       },7500)
     },
     showAnswer3(data,score){
-      popchat.play()
       this.scoreChat += score;
       this.text2 = data.currentTarget.innerText
       document.getElementById('block-answer').classList.remove('fade-in');
@@ -576,15 +565,12 @@ export default {
       document.getElementById('block-answer').classList.add('fade-out');
       setTimeout(()=>{
         document.getElementById('block-answer').style.display = 'none';
-      },500)
+      },1000)
       // this.userQuestion++
       setTimeout(()=>{
         document.getElementById('list-answer2').classList.add('fade-out-top')
-      },4500)
+      },3000)
       setTimeout(()=>{
-        FaiSound.volume = 0.5;
-        FaiSound.play()
-        popchat.play()
         this.wait3 = true
         this.userQuestion++
       },5000)
@@ -596,7 +582,6 @@ export default {
   },
   mounted(){
     sessionStorage.setItem('scoreChat',0)
-    waitchat.play()
   }
 }
 </script>
