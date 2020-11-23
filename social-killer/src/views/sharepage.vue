@@ -216,4 +216,18 @@ img.share-paper {
   font-family: "Inconsolata";
   cursor: pointer;
 }
+
+.back-home-btn:hover {
+	animation: back-home-btn 0.6s both;
+}
+@keyframes back-home-btn {
+  0% {
+    text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+  100% {
+    text-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+  }
+}
+
+
 </style>
