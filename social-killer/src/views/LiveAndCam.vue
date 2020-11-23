@@ -411,7 +411,7 @@
 video {
   border-radius: 3em;
   height: 100vw;
-  width: 97%;
+  width: 96%;
   position: absolute;
   top: 50%;
   transform : translate(0,-50%);
