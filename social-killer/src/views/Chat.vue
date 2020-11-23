@@ -492,6 +492,7 @@ import router from "@/router"
 // Fade-out and fade in 1s
 var waitchat = new Audio(require('@/assets/music/waiting-chat.mp3'))
 var popchat = new Audio(require('@/assets/music/pop-chat.mp3'))
+var FaiSound = new Audio(require('@/assets/music/FaiSound.mp3'))
 export default {
   name:"chat",
   data() {
@@ -581,6 +582,7 @@ export default {
         document.getElementById('list-answer2').classList.add('fade-out-top')
       },4500)
       setTimeout(()=>{
+        FaiSound.play()
         popchat.play()
         this.wait3 = true
         this.userQuestion++
