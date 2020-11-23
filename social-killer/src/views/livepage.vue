@@ -37,8 +37,9 @@
       <b-row class="h-100">
         <b-col cols="6" class="py-3 live-side">
           <!-- video -->
-          <div class="p-3" style="width: auto; height: 90%">
-            <video autoplay :src="require('@/assets/video/'+videoSrc)"></video>
+          <div class="p-0" style="width: auto; height: 90%">
+            <video autoplay :src="require('@/assets/video/'+videoSrc)" controls loop @click="changeToChatPage()">
+            </video>
           </div>
         </b-col>
         <b-col cols="6" class="comment-live border-left border-light py-3">
@@ -360,33 +361,14 @@ export default {
         return false;
       }
     },
-    changeToChatPage(id,score) {
+    changeToChatPage() {
       if (document.getElementById(id).classList.contains("clicked")) {
         console.log("Clicked");
       } else {
-        this.scoreLivePage += score;
-        document.getElementById(id).classList.add("clicked");
-        // ยังไม่เปลี่ยนหน้า
-        // Show only clicked emoji
-        if (document.getElementById) {
-          var divid = document.getElementById(id);
-          var divs = document.getElementsByClassName(
-            "emo-hide-" + (this.num - 1)
-          );
-
-          for (var i = 0; i < divs.length; i++) {
-            divs[i].style.display = "none";
-          }
-          divid.classList.add("bounce-in-right");
-          setTimeout(() => {
-            divid.style.display = "flex";
-          }, 300);
-          // change to chat
-          setTimeout(() => {
+        setTimeout(() => {
             sessionStorage.setItem('livePageScore',this.scoreLivePage);
             router.push("/chat");
-          }, 2000);
-        }
+        }, 2000);
         return false;
       }
     },
@@ -395,7 +377,7 @@ export default {
       console.log(score)
       document.getElementById("noti-down").style.display = "flex";
       // document.getElementById("video-live").src = "@/assets/video/endlive.mp4";
-
+      this.scoreLivePage += score;
       if (document.getElementById) {
           var divid = document.getElementById(id);
           var divs = document.getElementsByClassName(
