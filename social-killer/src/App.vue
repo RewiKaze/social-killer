@@ -8,6 +8,7 @@
 <script>
 var audio1 = new Audio(require('@/assets/music/Amnesia page1-7.mp3'))
 var audio2 = new Audio(require('@/assets/music/Necromorph.mp3'))
+var audio3 = new Audio(require('@/assets/music/ending.mp3'))
 export default {
   name:"AppMain",
   watch:{
@@ -19,6 +20,10 @@ export default {
         else if (from.name == "Chat" && to.name == "Warning"){
           audio1.pause();
           audio2.play();
+        }
+        else if (to.name == "Conclude"){
+          audio2.pause();
+          audio3.play();
         }
     }
   }
