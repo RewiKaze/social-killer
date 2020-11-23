@@ -195,7 +195,7 @@ export default {
 
 .share-img {
   width: 80vw;
-  height: 90%;
+  height: 95%;
 }
 
 img.share-paper {
