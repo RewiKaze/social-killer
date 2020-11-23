@@ -1,7 +1,7 @@
 <template>
   <div class="live-page">
     <!-- notification pop-up -->
-    <div class="noti slide-bottom" style="display:none;" id="noti-down">
+    <div class="noti slide-bottom" style="display:none;" id="noti-down" @click="changeToChatPage()">
       <b-row class="head-noti p-2">
         <b-col cols="3" class="head-noti-line">Linne</b-col>
         <b-col cols="9" class="mb-0 chat-text text-right" style="color:black !important;float:right">Now</b-col>
@@ -38,7 +38,7 @@
         <b-col cols="6" class="py-3 live-side">
           <!-- video -->
           <div class="p-0" style="width: auto; height: 90%">
-            <video autoplay :src="require('@/assets/video/'+videoSrc)" controls loop @click="changeToChatPage()">
+            <video autoplay :src="require('@/assets/video/'+videoSrc)" controls loop>
             </video>
           </div>
         </b-col>
@@ -362,19 +362,11 @@ export default {
       }
     },
     changeToChatPage() {
-      if (document.getElementById(id).classList.contains("clicked")) {
-        console.log("Clicked");
-      } else {
-        setTimeout(() => {
-            sessionStorage.setItem('livePageScore',this.scoreLivePage);
-            router.push("/chat");
-        }, 2000);
-        return false;
-      }
+        sessionStorage.setItem('livePageScore',this.scoreLivePage);
+        router.push("/chat");
     },
     NotiPopup(id,score){
       this.videoSrc = "endlive.mp4"
-      console.log(score)
       document.getElementById("noti-down").style.display = "flex";
       // document.getElementById("video-live").src = "@/assets/video/endlive.mp4";
       this.scoreLivePage += score;
@@ -408,12 +400,15 @@ export default {
   width: 70%;
   height: 22%;
   position: absolute;
-  left: 25%;
-  top: 12%;
+  left: 15%;
+  top: 3%;
   z-index: 10;
   transform: translate(-12%, -50%);
   background-color: #bbbbb9;
   border-radius: 1.5em;
+}
+.noti:hover{
+  cursor: pointer;
 }
 .head-noti-line{
   -webkit-text-stroke-width: 1.5px;
@@ -434,8 +429,8 @@ export default {
 
 @-webkit-keyframes slide-bottom{
   0% {
-    -webkit-transform:translateY(-10px);
-    transform:translateY(-10px)
+    -webkit-transform:translateY(-100px);
+    transform:translateY(-100px)
     }
   100% {
     -webkit-transform:translateY(0);
@@ -444,8 +439,8 @@ export default {
 }
 @keyframes slide-bottom{
   0% {
-    -webkit-transform:translateY(-10px);
-    transform:translateY(-10px)
+    -webkit-transform:translateY(-100px);
+    transform:translateY(-100px)
     }
   100% {
     -webkit-transform:translateY(0);
