@@ -351,6 +351,7 @@
 <script>
 import router from "@/router";
 // import router from "@/router";
+var notisound = new Audio(require('@/assets/music/messenger.mp3'))
 export default {
   name: "live",
   data() {
@@ -399,6 +400,7 @@ export default {
         router.push("/chat");
     },
     NotiPopup(id,score){
+      notisound.play()
       this.videoSrc = "endlive.mp4"
       setTimeout(() => {
         document.getElementById("noti-down").style.display = "block";
@@ -489,7 +491,7 @@ export default {
 
 
 .slide-bottom{
-  animation:slide-bottom 1s cubic-bezier(.25,.46,.45,.94) both
+  animation:slide-bottom 0.3s cubic-bezier(.25,.46,.45,.94) both
 }
 @keyframes slide-bottom{
   0% {
