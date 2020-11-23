@@ -1,59 +1,46 @@
 <template>
   <div class="live-page">
+    <!-- notification pop-up -->
+    <div class="noti slide-bottom" style="display:none;" id="noti-down">
+      <b-row class="head-noti p-2">
+        <b-col cols="3" class="head-noti-line">Linne</b-col>
+        <b-col cols="9" class="mb-0 chat-text text-right" style="color:black !important;float:right">Now</b-col>
+      </b-row>
+      <b-row class="info-noti p-0" style="color:black !important">
+        <b-col cols="3">
+          <img
+              class="img-profile"
+              src="@/assets/profile/profile6-01.png"
+              width="150vw"
+            />
+        </b-col>
+        <b-col cols="9" class="d-flex align-items-stretch" style="color:black !important">
+          <div class="chat-body">
+                <div class="header">
+                  <strong class="primary-font">Kitty</strong>
+                </div>
+                <p class="mb-0 chat-text" id="friend-chat2">
+                  มึง
+                </p>
+          </div>
+        </b-col>
+      </b-row>
+    </div>
     <div class="arrowCM">
           <label class="text-E">โปรดแสดงความรู้สึกต่อคอมเมนต์นี้</label>
           <svg width="2.5em" height="2.5em" viewBox="0 0 16 16" class="bi bi-arrow-right"
                                 fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" d="M2 13.5a.5.5 0 0 0 .5.5h6a.5.5 0 0 0 0-1H3.707L13.854 2.854a.5.5 0 0 0-.708-.708L3 12.293V7.5a.5.5 0 0 0-1 0v6z"/>
-</svg></div>
+          </svg>
+    </div>
     <b-container fluid class="comment-outside-border">
       <b-row class="h-100">
         <b-col cols="6" class="py-3 live-side">
-          <div
-            class="d-flex flex-row align-items-center justify-content-start icon"
-          >
-            <div class="p-2 icon-1">
-              <svg
-                width="100%"
-                height="100%"
-                viewBox="0 0 16 16"
-                class="bi bi-x-circle"
-                fill="currentColor"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
-                />
-                <path
-                  fill-rule="evenodd"
-                  d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
-                />
-              </svg>
-            </div>
-            <div class="p-2 icon-2">
-              <img src="@/assets/icon/icon4-01.png" width="100%" />
-            </div>
-            <div class="p-2 icon-1">
-              <img src="@/assets/icon/icon5-01.png" width="100%" />
-            </div>
-            <div class="p-1 icon-1" style="font-size: 2.5vmin">854</div>
-          </div>
           <!-- video -->
           <div class="p-3" style="width: auto; height: 90%">
-            <div
-              class="tenor-gif-embed"
-              data-postid="17955335"
-              data-share-method="host"
-              data-width="85%"
-              data-aspect-ratio="1.0"
-            >
-              <a
-                href="https://tenor.com/view/cat-jam-dance-cute-head-shaking-gif-17955335"
-                >Cat Jam GIF</a
-              >
-              from <a href="https://tenor.com/search/cat-gifs">Cat GIFs</a>
-            </div>
+            <video autoplay>
+            <source id="video-live" :src="require('@/assets/video/liveVDO.mp4')" type="video/mp4">
+          </video>
           </div>
         </b-col>
         <b-col cols="6" class="comment-live border-left border-light py-3">
@@ -304,19 +291,19 @@
             <!-- Emoji -->
             <b-col id="emoji-6" cols="4" class="live-emoji">
               <img
-                @click="changeToChatPage('emo-16',5)"
+                @click="NotiPopup('emo-16',5)"
                 id="emo-16"
                 class="emo-hide-6"
                 src="@/assets/emoji/emoji-01.png"
               />
               <img
-                @click="changeToChatPage('emo-17',0)"
+                @click="NotiPopup('emo-17',0)"
                 id="emo-17"
                 class="emo-hide-6"
                 src="@/assets/emoji/emoji-02.png"
               />
               <img
-                @click="changeToChatPage('emo-18',3)"
+                @click="NotiPopup('emo-18',3)"
                 id="emo-18"
                 class="emo-hide-6"
                 src="@/assets/emoji/emoji-03.png"
@@ -404,6 +391,25 @@ export default {
         return false;
       }
     },
+    NotiPopup(id,score){
+      document.getElementById("noti-down").style.display = "flex";
+      document.getElementById("video-live").src = "@/assets/video/endlive.mp4";
+
+      if (document.getElementById) {
+          var divid = document.getElementById(id);
+          var divs = document.getElementsByClassName(
+            "emo-hide-" + (this.num - 1)
+          );
+
+          for (var i = 0; i < divs.length; i++) {
+            divs[i].style.display = "none";
+          }
+          divid.classList.add("bounce-in-right");
+          setTimeout(() => {
+            divid.style.display = "flex";
+          }, 300);
+      }
+    },
   },
   mounted() {
     sessionStorage.setItem('livePageScore',0)
@@ -415,6 +421,55 @@ export default {
 </script>
 
 <style>
+.noti{
+  width: 70%;
+  height: 22%;
+  position: absolute;
+  left: 25%;
+  top: 12%;
+  z-index: 10;
+  transform: translate(-12%, -50%);
+  background-color: #bbbbb9;
+  border-radius: 1.5em;
+}
+.head-noti-line{
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: black;
+  color: transparent;
+  font-size: 2.5em;
+}
+.slide-bottom{
+  -webkit-animation:slide-bottom .5s cubic-bezier(.25,.46,.45,.94) both;
+  animation:slide-bottom .5s cubic-bezier(.25,.46,.45,.94) both
+}
+/* ----------------------------------------------
+ * Generated by Animista on 2020-11-23 19:58:12
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+@-webkit-keyframes slide-bottom{
+  0% {
+    -webkit-transform:translateY(-10px);
+    transform:translateY(-10px)
+    }
+  100% {
+    -webkit-transform:translateY(0);
+    transform:translateY(0)
+  }
+}
+@keyframes slide-bottom{
+  0% {
+    -webkit-transform:translateY(-10px);
+    transform:translateY(-10px)
+    }
+  100% {
+    -webkit-transform:translateY(0);
+    transform:translateY(0)
+  }
+}
+
 /* Animation */
 .comment-fade-in {
   animation: comment-fade-in 0.6s cubic-bezier(0.455, 0.03, 0.515, 0.955);
