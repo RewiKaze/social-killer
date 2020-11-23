@@ -159,7 +159,7 @@
           </div>
           <div class="comment">
             <!-- <div class="second-comment-text"> -->
-            <div style="font-size: 1.3em; text-align: center">
+            <div style="font-size: 1.3em; text-align: center; margin: 5em">
               ทำไมประเทศนี้ผ้าอนามัยแพงจังวะ...เมื่อไหร่รัฐบาลจะรู้ว่ามันจำเป็น
               ผู้หญิงทุกคนต้องใช้
             </div>
