@@ -175,7 +175,7 @@
                 <div class="header">
                   <strong class="primary-font">Kitty</strong>
                 </div>
-                <p class="mb-0 chat-text" id="friend-chat2">
+                <p class="mb-0 chat-text" id="friend-chat2" style="font-weight:bold">
                   มึงลองโดนเองดูบ้างไหมล่ะ
                 </p>
               </div>
@@ -457,7 +457,7 @@ hr {
 	animation: fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 .fade-out {
-	animation: fade-out 1s ease-out both;
+	animation: fade-out 0.5s ease-out both;
 }
 .fade-in {
 	animation: fade-out 1s ease-out both reverse;
@@ -516,7 +516,7 @@ export default {
       document.getElementById('block-answer').classList.add('fade-out');
       setTimeout(()=>{
         document.getElementById('block-answer').style.display = 'none';
-      },1000)
+      },500)
       setTimeout(()=>{
         document.getElementById('friend-chat').classList.add('fade-out-top')
       },4500)
@@ -542,7 +542,7 @@ export default {
       document.getElementById('block-answer').classList.add('fade-out');
       setTimeout(()=>{
         document.getElementById('block-answer').style.display = 'none';
-      },1000)
+      },500)
       setTimeout(()=>{
         document.getElementById('list-answer1').classList.add('fade-out-top')
       },3500)
@@ -576,7 +576,7 @@ export default {
       document.getElementById('block-answer').classList.add('fade-out');
       setTimeout(()=>{
         document.getElementById('block-answer').style.display = 'none';
-      },1000)
+      },500)
       // this.userQuestion++
       setTimeout(()=>{
         document.getElementById('list-answer2').classList.add('fade-out-top')

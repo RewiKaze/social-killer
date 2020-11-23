@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" style="overflow: hidden">
     <vue-page-transition style="height:100vh;" name="fade">
       <router-view/>
     </vue-page-transition>
@@ -56,6 +56,7 @@ body {
   background-color: black;
   background-repeat: no-repeat;
   background-size: cover;
+  overflow: hidden; /* Hide scrollbars */
 }
 #app {
   display: flex;

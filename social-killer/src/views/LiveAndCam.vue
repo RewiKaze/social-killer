@@ -515,6 +515,7 @@ video {
 </style>
 
 <script>
+var commentTime
 import router from "@/router";
 export default {
   name: "livecam",
