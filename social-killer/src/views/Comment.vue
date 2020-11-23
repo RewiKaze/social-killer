@@ -179,7 +179,7 @@
           </div>
           <div class="other-comment" style="display: inline-block">
             <img
-              src="@/assets/profile/profile5-01.png"
+              src="@/assets/profile/profile4-01.png"
               width="15%"
               style="margin-top: 1em"
             />
