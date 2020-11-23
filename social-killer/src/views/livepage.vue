@@ -1,5 +1,11 @@
 <template>
   <div class="live-page">
+    <div class="arrowCM">
+          <label class="text-E">โปรดแสดงความรู้สึกต่อคอมเมนต์นี้</label>
+          <svg width="2.5em" height="2.5em" viewBox="0 0 16 16" class="bi bi-arrow-right"
+                                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M2 13.5a.5.5 0 0 0 .5.5h6a.5.5 0 0 0 0-1H3.707L13.854 2.854a.5.5 0 0 0-.708-.708L3 12.293V7.5a.5.5 0 0 0-1 0v6z"/>
+</svg></div>
     <b-container fluid class="comment-outside-border">
       <b-row class="h-100">
         <b-col cols="6" class="py-3 live-side">
@@ -521,5 +527,58 @@ export default {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+}
+.arrowCM {
+        /* width: 100vh; */
+        -webkit-animation: 3s soft-blink infinite alternate;
+        animation: 3s soft-blink infinite alternate;
+        position: absolute;
+        opacity: 0;
+        padding-left: 88%;
+        margin-top: -2%;
+    }
+
+    @-webkit-keyframes soft-blink {
+        0% {
+            opacity: 0;
+        }
+
+        50% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 0.8;
+        }
+    }
+
+    @keyframes soft-blink {
+        0% {
+            opacity: 0;
+        }
+
+        50% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 0.8;
+        }
+    }
+
+    .arrowCM:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+    .text-E {
+  margin-top: 40px;
+  font-family: "ChulaCharas";
+  font-size: 0.8vw;
 }
 </style>
