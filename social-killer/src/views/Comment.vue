@@ -583,4 +583,31 @@ hr {
   -webkit-animation: 1s soft-blink infinite alternate;
   animation: 1s soft-blink infinite alternate;
 }
+@-webkit-keyframes soft-blink {
+        0% {
+            opacity: 0;
+        }
+
+        50% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 0.8;
+        }
+    }
+
+    @keyframes soft-blink {
+        0% {
+            opacity: 0;
+        }
+
+        50% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 0.8;
+        }
+    }
 </style>
