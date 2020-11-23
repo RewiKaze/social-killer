@@ -13,6 +13,10 @@
                         </svg>
                     </div>
                     <div class="Level-con">ระดับ {{level}}</div>
+                    <!-- ฝากด้วยนะโน๊ตซัง -->
+                    <div class="Level-con text-center" style="padding-left:0% !important"> คะแนนนี้คำนวณมาจากทุกคำตอบ และทางเลือกของคุณ <br>
+                    และทุกคำตอบล้วนเป็น sexual harassment ที่เรายกตัวอย่างมา <br>
+                    จากคำที่มีคนใช้จริงในโซเชียล โดยแตกต่างกันเพียงแค่ระดับความรุนแรง </div>
                 </div>
             </div>
         </div>
@@ -98,7 +102,7 @@
 .conclude-final{
     width:100vw;
     height: 100vh;
-    color:white
+    color:white;
 }
     .conclude-content-box {
 
