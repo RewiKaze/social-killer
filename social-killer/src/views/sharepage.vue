@@ -45,7 +45,7 @@
               :src="require('@/assets' + selectedImage)"
               class="share-paper"
               id="share-paper"
-              height="100%"
+              height="105%"
             />
           </div>
 
@@ -63,7 +63,7 @@
         >
           <div class="dl-btn-field text-center">
             <svg
-              height="100%"
+              height="65%"
               viewBox="0 0 16 16"
               class="bi bi-download"
               fill="#ffffff"
