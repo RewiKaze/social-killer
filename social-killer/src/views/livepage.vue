@@ -25,7 +25,7 @@
               <strong class="noti-name">Kitty</strong>
             </div>
             <p class="mb-0 noti-chat" id="friend-chat2">
-              มึง
+              มึง . . . .
             </p>
           </div>
         </b-col>
