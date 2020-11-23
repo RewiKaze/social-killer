@@ -514,7 +514,7 @@ export default {
       },1000)
       setTimeout(()=>{
         document.getElementById('friend-chat').classList.add('fade-out-top')
-      },3000)
+      },4500)
       setTimeout(()=>{
         this.userQuestion++;
       },5000)
@@ -537,7 +537,7 @@ export default {
       },1000)
       setTimeout(()=>{
         document.getElementById('list-answer1').classList.add('fade-out-top')
-      },3000)
+      },3500)
       // setTimeout(()=>{
       //   document.getElementById('friend-chat2').classList.add('fade-out-top')
       // },4500)
@@ -547,7 +547,7 @@ export default {
       },4000)
       setTimeout(()=>{
         document.getElementById('friend-chat2').classList.add('fade-out-top')
-      },6000)
+      },7000)
       setTimeout(()=>{
         this.wait2 = true
         this.show = false
@@ -569,7 +569,7 @@ export default {
       // this.userQuestion++
       setTimeout(()=>{
         document.getElementById('list-answer2').classList.add('fade-out-top')
-      },3000)
+      },4500)
       setTimeout(()=>{
         this.wait3 = true
         this.userQuestion++
