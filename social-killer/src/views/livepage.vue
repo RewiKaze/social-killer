@@ -38,9 +38,7 @@
         <b-col cols="6" class="py-3 live-side">
           <!-- video -->
           <div class="p-3" style="width: auto; height: 90%">
-            <video autoplay>
-            <source id="video-live" :src="require('@/assets/video/liveVDO.mp4')" type="video/mp4">
-          </video>
+            <video autoplay :src="require('@/assets/video/'+videoSrc)"></video>
           </div>
         </b-col>
         <b-col cols="6" class="comment-live border-left border-light py-3">
@@ -324,7 +322,8 @@ export default {
   data() {
     return {
       num: 2,
-      scoreLivePage:0
+      scoreLivePage:0,
+      videoSrc: "liveVDO.mp4"
     };
   },
   methods: {
@@ -392,8 +391,10 @@ export default {
       }
     },
     NotiPopup(id,score){
+      this.videoSrc = "endlive.mp4"
+      console.log(score)
       document.getElementById("noti-down").style.display = "flex";
-      document.getElementById("video-live").src = "@/assets/video/endlive.mp4";
+      // document.getElementById("video-live").src = "@/assets/video/endlive.mp4";
 
       if (document.getElementById) {
           var divid = document.getElementById(id);
