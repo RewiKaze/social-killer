@@ -14,7 +14,7 @@
                     </div>
                     <div class="Level-con">ระดับ {{level}}</div>
                     <!-- ฝากด้วยนะโน๊ตซัง -->
-                    <div class="Level-con text-center" style="padding-left:0% !important"> คะแนนนี้คำนวณมาจากทุกคำตอบ และทางเลือกของคุณ <br>
+                    <div class="Level-con2"> คะแนนนี้คำนวณมาจากทุกคำตอบ และทางเลือกของคุณ <br>
                     และทุกคำตอบล้วนเป็น sexual harassment ที่เรายกตัวอย่างมา <br>
                     จากคำที่มีคนใช้จริงในโซเชียล โดยแตกต่างกันเพียงแค่ระดับความรุนแรง </div>
                 </div>
@@ -27,6 +27,7 @@
                     <div class="HeadTitle" id="head"><span class="headT"><b>Sexual Harrasment</b>
                             <p class="what"> คือ</p>
                         </span></div>
+                        <br>
                 </div>
             </div>
             <div class="row">
@@ -107,8 +108,8 @@
     .conclude-content-box {
 
         position: absolute;
-        width: 50%;
-        height: 70%;
+        width: 50vw;
+        height: 70vw;
     }
 
     .conclude-content-box2 {
@@ -116,7 +117,7 @@
         border-radius: 35px;
         position: absolute;
         border: 0.5px solid white;
-        width: 50%;
+        width: 50vw;
         right: 25px;
         top: 16%;
         right: 5%;
@@ -130,19 +131,19 @@
 
     .HeadTitle {
         font-family: "ChulaCharas", sans-serif;
-        font-size: 37pt;
+        font-size: 2vw;
 
     }
 
     .mean {
-        font-size: 130%;
+        font-size: 1.3vw;
         opacity: 0%;
 
     }
 
     .headT {
         font-family: "Chivo", sans-serif;
-        font-size: 60%;
+        font-size: 2vw;
         font-weight: 400;
     }
 
@@ -151,8 +152,8 @@
         left: 0;
         top: 0;
         font-weight: bold;
-        font-size: 100pt;
-        height: 80pt;
+        font-size: 8.5vw;
+        height: 7.2vw;
         padding-left: 2%;
 
     }
@@ -179,7 +180,7 @@
         font-family: "ChulaCharas", sans-serif;
         left: 0;
         top: 0;
-        font-size: 20pt;
+        font-size: 1.8vw;
         padding: 10%;
 
     }
@@ -187,10 +188,21 @@
         font-family: "ChulaCharas", sans-serif;
         left: 0;
         top: 0;
-        font-size: 20pt;
+        font-size: 1.8vw;
         font-weight: italic;
         padding-top: 3%;
-        padding-left: 35%;
+        padding-left: 38%;
+
+    }
+    .Level-con2 {
+        font-family: "ChulaCharas", sans-serif;
+        left: 0;
+        top: 0;
+        font-size: 0.9vw;
+        font-weight: italic;
+        padding-top: 0%;
+        margin-left: -15%;
+        text-align: center;
 
     }
 
@@ -309,11 +321,11 @@
 
     .pie-chart {
         display: block;
-        max-width: 300px;
-        max-height: 300px;
+        max-width: 13vw;
+        /* max-height: 220px; */
         width: 100%;
         padding: 0;
-        margin-left: 21%;
+        margin-left: 30%;
         margin-top: -6%;
         transform-origin: 50% 50%;
         -moz-transform-origin: 40px 40px;
