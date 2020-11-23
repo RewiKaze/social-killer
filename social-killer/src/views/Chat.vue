@@ -582,6 +582,7 @@ export default {
         document.getElementById('list-answer2').classList.add('fade-out-top')
       },4500)
       setTimeout(()=>{
+        FaiSound.volume = 0.5;
         FaiSound.play()
         popchat.play()
         this.wait3 = true
