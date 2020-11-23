@@ -97,7 +97,7 @@
                 </div>
               </div>
               <img
-                src="https://mdbootstrap.com/img/Photos/Avatars/avatar-5.jpg"
+                src="@/assets/profile/profile6-01.png"
                 alt="avatar"
                 class="avatar rounded-circle z-depth-1 pic-pro fade-in-bottom"
                 v-if="(userQuestion == 2 || userQuestion == 3) && wait == true"
@@ -112,7 +112,7 @@
               class="d-flex justify-content-left mb-4 text-left align-items-left"
             >
               <img
-                src="https://mdbootstrap.com/img/Photos/Avatars/avatar-6.jpg"
+                src="@/assets/profile/profile7-01.png"
                 alt="avatar"
                 class="avatar rounded-circle ml-0 z-depth-1 pic-pro fade-in-bottom"
                 v-if="userQuestion == 3 || userQuestion == 4"
