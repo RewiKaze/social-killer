@@ -24,7 +24,7 @@
               id="password-field"
             />
           </div>
-          <div class="enter-button" @click="goToComment">Enter</div>
+          <div class="enter-button" @click="goToComment" id="startMusic">Enter</div>
         </div>
       </div>
     </div>
@@ -79,6 +79,10 @@ export default {
     setTimeout(() => {
       this.passWrite();
     }, 1450);
+  },
+  watch:{
+   
+
   }
 };
 </script>

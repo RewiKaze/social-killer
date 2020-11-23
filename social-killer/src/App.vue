@@ -5,7 +5,26 @@
     </vue-page-transition>
   </div>
 </template>
-
+<script>
+var audio1 = new Audio(require('@/assets/music/Amnesia page1-7.mp3'))
+var audio2 = new Audio(require('@/assets/music/Necromorph.mp3'))
+export default {
+  name:"AppMain",
+  watch:{
+    $route (to, from){
+      console.log(from,to,from.name == "Home",to.name == "Comment")
+        if(from.name == "Home" && to.name == "Comment"){
+          audio1.play()
+        }
+        else if (from.name == "Chat" && to.name == "Warning"){
+          audio1.pause();
+          audio2.play();
+        }
+    }
+  }
+  
+}
+</script>
 <style>
 @font-face {
   font-family: "Chivo-Light";

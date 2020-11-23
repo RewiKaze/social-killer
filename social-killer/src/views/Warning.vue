@@ -70,17 +70,23 @@
 </style>
 
 <script>
+var livetime
 import router from "@/router"
 export default {
     name: "warning",
     mounted(){
-        setTimeout(()=>{
-            router.push('/livecam')
-        },8000)
+        this.autorun();
     },
     methods:{
+		autorun(){
+			livetime = setTimeout(()=>{
+            router.push('/livecam')
+        },8000)
+		},
         skipped(){
-            router.push('/conclude')
+			router.push('/conclude')
+			clearTimeout(livetime)
+			console.log("cleared timeout")
         }
     }
 }

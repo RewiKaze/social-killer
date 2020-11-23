@@ -15,7 +15,7 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: "/",
-    name: "loading",
+    name: "Loading",
     component: loading
   },
   {
@@ -30,26 +30,32 @@ const routes = [
     component: live
   },
   {
+    name: "Chat",
     path: "/chat",
     component : chat
   },
   {
+    name: "Home",
     path: "/home",
     component : Home
   },
   {
+    name: "Share",
     path: "/share",
     component : share
   },
   {
+    name: "LiveCam",
     path: "/livecam",
     component : livecam
   },
   {
+    name: "Conclude",
     path: "/conclude",
     component : conclude
   },
   {
+    name: "Warning",
     path: "/warning",
     component: warning
   }
@@ -60,5 +66,6 @@ const router = new VueRouter({
   base: process.env.BASE_URL,
   routes
 });
+router.replace('/')
   
 export default router;
