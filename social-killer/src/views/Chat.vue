@@ -13,7 +13,7 @@
               id="friend-chat"
             >
               <img
-                src="https://mdbootstrap.com/img/Photos/Avatars/avatar-6.jpg"
+                src="@/assets/profile/profile8-01.png"
                 alt="avatar"
                 class="avatar rounded-circle ml-0 z-depth-1 pic-pro"
                 v-if="userQuestion == 1"
@@ -45,7 +45,7 @@
                 </div>
               </div>
               <img
-                src="https://mdbootstrap.com/img/Photos/Avatars/avatar-5.jpg"
+                src="@/assets/profile/profile7-01.png"
                 alt="avatar"
                 class="avatar rounded-circle z-depth-1 pic-pro"
                 v-if="userQuestion == 1 || userQuestion == 2"
@@ -60,7 +60,7 @@
               id="friend-chat2"
             >
               <img
-                src="https://mdbootstrap.com/img/Photos/Avatars/avatar-6.jpg"
+                src="@/assets/profile/profile8-01.png"
                 alt="avatar"
                 class="avatar rounded-circle ml-0 z-depth-1 pic-pro fade-in-bottom"
                 v-if="(userQuestion == 2 ||userQuestion == 3) && show == true"
@@ -97,7 +97,7 @@
                 </div>
               </div>
               <img
-                src="@/assets/profile/profile6-01.png"
+                src="@/assets/profile/profile7-01.png"
                 alt="avatar"
                 class="avatar rounded-circle z-depth-1 pic-pro fade-in-bottom"
                 v-if="(userQuestion == 2 || userQuestion == 3) && wait == true"
@@ -112,7 +112,7 @@
               class="d-flex justify-content-left mb-4 text-left align-items-left"
             >
               <img
-                src="@/assets/profile/profile7-01.png"
+                src="@/assets/profile/profile8-01.png"
                 alt="avatar"
                 class="avatar rounded-circle ml-0 z-depth-1 pic-pro fade-in-bottom"
                 v-if="userQuestion == 3 || userQuestion == 4"
@@ -151,7 +151,7 @@
                 </div>
               </div>
               <img
-                src="https://mdbootstrap.com/img/Photos/Avatars/avatar-5.jpg"
+                src="@/assets/profile/profile7-01.png"
                 alt="avatar"
                 class="avatar rounded-circle z-depth-1 pic-pro fade-in-bottom"
                 v-if="(userQuestion == 3 || userQuestion == 4) && wait2 == true"
@@ -166,7 +166,7 @@
               class="d-flex justify-content-left mb-4 text-left align-items-left"
             >
               <img
-                src="https://mdbootstrap.com/img/Photos/Avatars/avatar-6.jpg"
+                src="@/assets/profile/profile8-01.png"
                 alt="avatar"
                 class="avatar rounded-circle ml-0 z-depth-1 pic-pro fade-in-bottom"
                 v-if="userQuestion == 4"
