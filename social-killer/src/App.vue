@@ -25,6 +25,9 @@ export default {
           audio2.pause();
           audio3.play();
         }
+        else if (to.name == "Home"){
+          audio3.pause();
+        }
     }
   }
   
