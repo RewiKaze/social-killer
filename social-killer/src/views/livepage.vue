@@ -26,23 +26,33 @@
         </b-col>
       </b-row>
     </div>
+    <!-- End notification -->
+
+    <!-- Arrow -->
     <div class="arrowCM">
           <label class="text-E">โปรดแสดงความรู้สึกต่อคอมเมนต์นี้</label>
           <svg width="2.5em" height="2.5em" viewBox="0 0 16 16" class="bi bi-arrow-right"
-                                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" d="M2 13.5a.5.5 0 0 0 .5.5h6a.5.5 0 0 0 0-1H3.707L13.854 2.854a.5.5 0 0 0-.708-.708L3 12.293V7.5a.5.5 0 0 0-1 0v6z"/>
+            fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M2 13.5a.5.5 0 0 0 .5.5h6a.5.5 0 0 0 0-1H3.707L13.854 2.854a.5.5 0 0 0-.708-.708L3 12.293V7.5a.5.5 0 0 0-1 0v6z"/>
           </svg>
     </div>
+    <!-- End Arrow -->
+
+    <!-- Container -->
     <b-container fluid class="comment-outside-border">
       <b-row class="h-100">
         <b-col cols="6" class="py-3 live-side">
+
           <!-- video -->
           <div class="p-0" style="width: auto; height: 90%">
             <video autoplay :src="require('@/assets/video/'+videoSrc)" controls loop>
             </video>
           </div>
+          <!-- End video -->
+
         </b-col>
         <b-col cols="6" class="comment-live border-left border-light py-3">
+
           <!-- !!! One person comemnt !!! -->
           <b-row id="comment-1" class="p-1">
             <!-- proflie -->
@@ -88,6 +98,7 @@
             </b-col>
           </b-row>
           <!-- !!! End Comment !!! -->
+
           <!-- !!! One person comemnt !!! -->
           <b-row id="comment-2" class="p-1" style="display: none">
             <!-- proflie -->
@@ -133,6 +144,7 @@
             </b-col>
           </b-row>
           <!-- !!! End Comment !!! -->
+
           <!-- !!! One person comemnt !!! -->
           <b-row id="comment-3" class="p-1" style="display: none">
             <!-- proflie -->
@@ -177,6 +189,7 @@
             </b-col>
           </b-row>
           <!-- !!! End Comment !!! -->
+
           <!-- !!! One person comemnt !!! -->
           <b-row id="comment-4" class="p-1" style="display: none">
             <!-- proflie -->
@@ -221,6 +234,7 @@
             </b-col>
           </b-row>
           <!-- !!! End Comment !!! -->
+
           <!-- !!! One person comemnt !!! -->
           <b-row id="comment-5" class="p-1" style="display: none">
             <!-- proflie -->
@@ -266,6 +280,7 @@
             </b-col>
           </b-row>
           <!-- !!! End Comment !!! -->
+
           <!-- !!! One person comemnt !!! -->
           <b-row id="comment-6" class="p-1" style="display: none">
             <!-- proflie -->
@@ -310,6 +325,7 @@
             </b-col>
           </b-row>
           <!-- !!! End Comment !!! -->
+
         </b-col>
       </b-row>
     </b-container>
