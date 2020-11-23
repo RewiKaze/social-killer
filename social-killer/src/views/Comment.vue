@@ -581,5 +581,6 @@ hr {
 }
 .playvideo{
   -webkit-animation: 3s soft-blink infinite alternate;
+  animation: 3s soft-blink infinite alternate;
 }
 </style>
