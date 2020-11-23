@@ -580,7 +580,7 @@ hr {
   display:block;
 }
 .playvideo{
-  -webkit-animation: 3s soft-blink infinite alternate;
-  animation: 3s soft-blink infinite alternate;
+  -webkit-animation: 1s soft-blink infinite alternate;
+  animation: 1s soft-blink infinite alternate;
 }
 </style>
