@@ -253,7 +253,7 @@
           </div>
           <div class="comment">
             <div class="forth-comment-text" style="position:relative; cursor:pointer" @click="changeToLivePage()" >
-              <img src="@/assets/emoji/play1-01.png" width="300vw" style="position:absolute; top:50%; left:50%; transform: translate(-50%, -50%);">
+              <img clas="playvideo" src="@/assets/emoji/play1-01.png" width="300vw" style="position:absolute; top:50%; left:50%; transform: translate(-50%, -50%);">
             </div>
           </div>
           <div class="like-section">
@@ -578,5 +578,8 @@ hr {
   height: 20vw;
   margin:auto;
   display:block;
+}
+.playvideo{
+  -webkit-animation: 3s soft-blink infinite alternate;
 }
 </style>
