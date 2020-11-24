@@ -3,6 +3,10 @@
     <vue-page-transition style="height: 100vh" name="fade">
       <router-view />
     </vue-page-transition>
+    <div style="position:absolute; left:50%;bottom:0; transform: translate(-50%,0); color:white;font-family:'Chivo-Light'; font-size:0.7vw">
+    	Copyright © Social-Killer 2020 <a style="color:#73000C;" href="https://github.com/RewiKaze/social-killer">Github</a>
+          
+    </div>  
   </div>
 </template>
 <script>

@@ -17,7 +17,7 @@
 			</div>
 		</div>
 		<br>
-		<p class="blink-loop skip" @click="skipped()">Skip</p>
+		<p class="blink-loop skip" @click="skipped()">ไปต่อ</p>
 	</div>
 </div>
 </template>
@@ -84,7 +84,7 @@ export default {
         },8000)
 		},
         skipped(){
-			router.push('/conclude')
+			router.push('/livecam')
 			clearTimeout(livetime)
 			console.log("cleared timeout")
         }
