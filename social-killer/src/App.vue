@@ -1,37 +1,33 @@
 <template>
   <div id="app" style="overflow: hidden">
-    <vue-page-transition style="height:100vh;" name="fade">
-      <router-view/>
+    <vue-page-transition style="height: 100vh" name="fade">
+      <router-view />
     </vue-page-transition>
   </div>
 </template>
 <script>
-var audio1 = new Audio(require('@/assets/music/Amnesia page1-7.mp3'))
-var audio2 = new Audio(require('@/assets/music/Necromorph.mp3'))
-var audio3 = new Audio(require('@/assets/music/ending.mp3'))
+var audio1 = new Audio(require("@/assets/music/Amnesia page1-7(1).mp3"));
+var audio2 = new Audio(require("@/assets/music/Necromorph.mp3"));
+var audio3 = new Audio(require("@/assets/music/ending.mp3"));
 export default {
-  name:"AppMain",
-  watch:{
-    $route (to, from){
-      console.log(from,to,from.name == "Home",to.name == "Comment")
-        if(from.name == "Home" && to.name == "Comment"){
-          audio1.play()
-        }
-        else if (from.name == "Chat" && to.name == "Warning"){
-          audio1.pause();
-          audio2.play();
-        }
-        else if (to.name == "Conclude"){
-          audio2.pause();
-          audio3.play();
-        }
-        else if (to.name == "Home"){
-          audio3.pause();
-        }
-    }
-  }
-  
-}
+  name: "AppMain",
+  watch: {
+    $route(to, from) {
+      console.log(from, to, from.name == "Home", to.name == "Comment");
+      if (from.name == "Home" && to.name == "Comment") {
+        audio1.play();
+      } else if (from.name == "Chat" && to.name == "Warning") {
+        audio1.pause();
+        audio2.play();
+      } else if (to.name == "Conclude") {
+        audio2.pause();
+        audio3.play();
+      } else if (to.name == "Home") {
+        audio3.pause();
+      }
+    },
+  },
+};
 </script>
 <style>
 @font-face {
