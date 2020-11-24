@@ -9,17 +9,17 @@
         <div class="head-noti-time text-center" style="color:black !important;">Now</div>
       </div>
 
-      <b-row class="noti-info p-0" style="color:black !important">
+      <div class="noti-info p-0" style="color:black !important">
 
-        <b-col cols="2" class="text-center h-100">
+        <div class="text-center h-100 px-4 noti-img">
           <img
               class="img-profile"
               src="@/assets/profile/profile8-01.png"
               height="80%"
             />
-        </b-col>
+        </div>
 
-        <b-col cols="10" class="d-flex flex-column justify-content-center" style="color:black !important">
+        <div  class="d-flex flex-column justify-content-center px-3" style="flex: 1 1 auto">
           <div class="chat-body">
             <div class="header">
               <strong class="noti-name">Kitty</strong>
@@ -28,22 +28,12 @@
               มึง . . . .
             </p>
           </div>
-        </b-col>
+        </div>
 
-      </b-row>
+      </div>
 
     </div>
     <!-- End notification -->
-
-    <!-- Arrow -->
-    <!-- <div class="arrowCM">
-          <label class="text-E">โปรดแสดงความรู้สึกต่อคอมเมนต์นี้</label>
-          <svg width="2.5em" height="2.5em" viewBox="0 0 16 16" class="bi bi-arrow-right"
-            fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" d="M2 13.5a.5.5 0 0 0 .5.5h6a.5.5 0 0 0 0-1H3.707L13.854 2.854a.5.5 0 0 0-.708-.708L3 12.293V7.5a.5.5 0 0 0-1 0v6z"/>
-          </svg>
-    </div> -->
-    <!-- End Arrow -->
 
     <!-- Container -->
     <b-container fluid class="comment-outside-border">
@@ -345,10 +335,12 @@
 
       </b-row>
     </b-container>
+    <!-- End Container -->
 
   </div>
 </template>
 <script>
+var popChat = new Audio(require('@/assets/music/pop-chat.mp3'))
 import router from "@/router";
 // import router from "@/router";
 var notisound = new Audio(require('@/assets/music/messenger.mp3'))
@@ -363,6 +355,7 @@ export default {
   },
   methods: {
     addNextComment(id, score) {
+      popChat.play()
       if (document.getElementById(id).classList.contains("clicked")) {
         console.log("Clicked");
       } else {
@@ -425,10 +418,8 @@ export default {
     },
   },
   mounted() {
+    popChat.play()
     sessionStorage.setItem('livePageScore',0)
-    let recaptchaScript = document.createElement("script");
-    recaptchaScript.setAttribute("src", "https://tenor.com/embed.js");
-    document.head.appendChild(recaptchaScript);
   },
 };
 </script>
@@ -559,9 +550,14 @@ export default {
   font-size: 2.5vmin;
 }
 .noti-info {
+  display: inline-flex;
   position: relative;
   flex: 1 1 auto;
   height: 65%;
+}
+.noti-img {
+  width: auto;
+
 }
 .noti-name {
   font-size: 3.2vmin;

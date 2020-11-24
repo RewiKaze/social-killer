@@ -515,6 +515,7 @@ video {
 </style>
 
 <script>
+var popChat = new Audio(require('@/assets/music/pop-chat.mp3'))
 var commentTime
 import router from "@/router";
 export default {
@@ -546,52 +547,66 @@ export default {
         });
     }
     setTimeout(() => {
+      popChat.play()
     document.getElementById("comment-2").style.display = "flex";
     }, 4000);
     setTimeout(() => {
+      popChat.play()
       document.getElementById("comment-3").style.display = "flex";
     }, 8000);
     setTimeout(() => {
+      popChat.play()
       document.getElementById("skip-comment").style.display = "block";
     }, 9000);
     setTimeout(() => {
+      popChat.play()
       document.getElementById("comment-4").style.display = "flex";
     }, 12000);
     setTimeout(() => {
+      popChat.play()
       document.getElementById("comment-5").style.display = "flex";
     }, 16000);
     setTimeout(() => {
+      popChat.play()
       document.getElementById("comment-6").style.display = "flex";
     }, 20000);
     setTimeout(() => {
+      popChat.play()
       document.getElementById("comment-7").style.display = "flex";
       document.getElementById("comment-1").style.display = "none";
     }, 24000);
     setTimeout(() => {
+      popChat.play()
       document.getElementById("comment-8").style.display = "flex";
       document.getElementById("comment-2").style.display = "none";
     }, 28000);
     setTimeout(() => {
+      popChat.play()
       document.getElementById("comment-9").style.display = "flex";
       document.getElementById("comment-3").style.display = "none";
     }, 32000);
     setTimeout(() => {
+      popChat.play()
       document.getElementById("comment-10").style.display = "flex";
       document.getElementById("comment-4").style.display = "none";
     }, 36000);
     setTimeout(() => {
+      popChat.play()
       document.getElementById("comment-11").style.display = "flex";
       document.getElementById("comment-5").style.display = "none";
     }, 40000);
     setTimeout(() => {
+      popChat.play()
       document.getElementById("comment-12").style.display = "flex";
       document.getElementById("comment-6").style.display = "none";
     }, 44000);
     setTimeout(() => {
+      popChat.play()
       document.getElementById("comment-13").style.display = "flex";
       document.getElementById("comment-7").style.display = "none";
     }, 48000);
     setTimeout(() => {
+      popChat.play()
       document.getElementById("comment-14").style.display = "flex";
       document.getElementById("comment-8").style.display = "none";
     }, 52000);
