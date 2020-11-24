@@ -28,6 +28,9 @@
         </div>
       </div>
     </div>
+    <div class="text-center chatlog text-focus-in" id="next-text" style="margin-top:75vh;font-size:0.8vw;position:absolute;margin-left:37vw;display:none;">เว็บนี้จัดทำเพื่อให้สังคมตระหนัก และเกิดการเรียนรู้เกี่ยวกับ Sexual Harrasment เท่านั้น<br>
+    อาจมีการจำลองสถานการณ์ และคำพูดที่มีความรุนแรง ผู้ที่มีอาการทางจิต หรือมีอาการ <br>
+    เกี่ยวกับโรคซึมเศร้าควรหลีกเลี่ยง หรือสามารถกด Skip เพื่อข้ามสถานการณ์ที่ทำให้ไม่สบายใจได้</div>
     <div class="side-text">
       <div>SOCIAL</div>
       <div style="text-align:center">KILLER</div>
@@ -79,6 +82,9 @@ export default {
     setTimeout(() => {
       this.passWrite();
     }, 1450);
+    setTimeout(() => {
+      document.getElementById("next-text").style.display = "flex";
+    }, 2000);
   },
   watch:{
    
@@ -181,5 +187,35 @@ export default {
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 0.5px;
   -webkit-text-stroke-color: white;
+}
+
+.text-focus-in {
+	-webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+@-webkit-keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
 }
 </style>
