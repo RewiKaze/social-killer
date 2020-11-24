@@ -515,25 +515,54 @@ video {
 </style>
 
 <script>
+
 var popChat = new Audio(require('@/assets/music/pop-chat.mp3'))
-var commentTime
+var commentTime;
+var one
+var two
+var three
+var four
+var five
+var six
+var seven
+var eight
+var nine
+var ten
+var eleven
+var twelve
+var thirteen
+var fourteen
 import router from "@/router";
 export default {
   name: "livecam",
   methods: {
     skipComment() {
       router.push('/conclude')
-			clearTimeout(commentTime)
+      clearTimeout(commentTime)
+      clearTimeout(one)
+      clearTimeout(two)
+      clearTimeout(three)
+      clearTimeout(four)
+      clearTimeout(five)
+      clearTimeout(six)
+      clearTimeout(seven)
+      clearTimeout(eight)
+      clearTimeout(nine)
+      clearTimeout(ten)
+      clearTimeout(eleven)
+      clearTimeout(twelve)
+      clearTimeout(thirteen)
+      clearTimeout(fourteen)
+
 			console.log("cleared timeout")
     },
     autoToConclude() {
       commentTime = setTimeout(() => {
         router.push("/conclude")
       }, 55000);
-    }
-  },
-  mounted(){
-    const video = document.getElementById("videoElement");
+    },
+    runthispage(){
+          const video = document.getElementById("videoElement");
 
 
     if (navigator.mediaDevices.getUserMedia) {
@@ -546,71 +575,75 @@ export default {
           console.log(err0r + "Something went wrong!");
         });
     }
-    setTimeout(() => {
+    one = setTimeout(() => {
       popChat.play()
-    document.getElementById("comment-2").style.display = "flex";
+      document.getElementById("comment-2").style.display = "flex";
     }, 4000);
-    setTimeout(() => {
+    two = setTimeout(() => {
       popChat.play()
       document.getElementById("comment-3").style.display = "flex";
     }, 8000);
-    setTimeout(() => {
+    three = setTimeout(() => {
       popChat.play()
       document.getElementById("skip-comment").style.display = "block";
     }, 9000);
-    setTimeout(() => {
+    four = setTimeout(() => {
       popChat.play()
       document.getElementById("comment-4").style.display = "flex";
     }, 12000);
-    setTimeout(() => {
+    five = setTimeout(() => {
       popChat.play()
       document.getElementById("comment-5").style.display = "flex";
     }, 16000);
-    setTimeout(() => {
+    six = setTimeout(() => {
       popChat.play()
       document.getElementById("comment-6").style.display = "flex";
     }, 20000);
-    setTimeout(() => {
+    seven = setTimeout(() => {
       popChat.play()
       document.getElementById("comment-7").style.display = "flex";
       document.getElementById("comment-1").style.display = "none";
     }, 24000);
-    setTimeout(() => {
+    eight = setTimeout(() => {
       popChat.play()
       document.getElementById("comment-8").style.display = "flex";
       document.getElementById("comment-2").style.display = "none";
     }, 28000);
-    setTimeout(() => {
+    nine = setTimeout(() => {
       popChat.play()
       document.getElementById("comment-9").style.display = "flex";
       document.getElementById("comment-3").style.display = "none";
     }, 32000);
-    setTimeout(() => {
+    ten = setTimeout(() => {
       popChat.play()
       document.getElementById("comment-10").style.display = "flex";
       document.getElementById("comment-4").style.display = "none";
     }, 36000);
-    setTimeout(() => {
+    eleven = setTimeout(() => {
       popChat.play()
       document.getElementById("comment-11").style.display = "flex";
       document.getElementById("comment-5").style.display = "none";
     }, 40000);
-    setTimeout(() => {
+    twelve = setTimeout(() => {
       popChat.play()
       document.getElementById("comment-12").style.display = "flex";
       document.getElementById("comment-6").style.display = "none";
     }, 44000);
-    setTimeout(() => {
+    thirteen = setTimeout(() => {
       popChat.play()
       document.getElementById("comment-13").style.display = "flex";
       document.getElementById("comment-7").style.display = "none";
     }, 48000);
-    setTimeout(() => {
+    fourteen = setTimeout(() => {
       popChat.play()
       document.getElementById("comment-14").style.display = "flex";
       document.getElementById("comment-8").style.display = "none";
     }, 52000);
     this.autoToConclude();
+    }
+  },
+  mounted(){
+    this.runthispage()
   }
 };
 
