@@ -56,6 +56,7 @@
     color: white;
     font-size: 1.2vw;
     cursor:pointer;
+	font-family: "ChulaCharas";
 }
 .warning-content{
 	margin-top: 9%;
