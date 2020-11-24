@@ -53,7 +53,7 @@
 
           <!-- add video here -->
           <div class="p-0" style="width: auto; height: 90%">
-            <video autoplay :src="require('@/assets/video/'+videoSrc)" loop>
+            <video autoplay :src="require('@/assets/video/'+videoSrc)" loop rel="preload">
             </video>
           </div>
 
